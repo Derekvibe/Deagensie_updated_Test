@@ -5,628 +5,442 @@ definePageMeta({
   alias: ['/terms-of-service'],
 });
 
-const sections = [
-  { id: 'agreement-eligibility', label: '1. Agreement & Eligibility' },
-  { id: 'ecosystem-scope', label: '2. The Deagensie Dual Engines' },
-  { id: 'user-accounts', label: '3. Accounts & Vetting' },
-  { id: 'growth-lab-terms', label: '4. Growth Lab & SOW Engagements' },
-  { id: 'subscriptions-billing', label: '5. Subscriptions & Payment Terms' },
-  { id: 'taas-marketplace', label: '6. TaaS & Talent Placement Terms' },
-  { id: 'non-circumvention', label: '7. Non-Circumvention & Conversion' },
-  { id: 'intellectual-property', label: '8. Intellectual Property Rights' },
-  { id: 'confidentiality-nda', label: '9. Mutual Confidentiality & NDAs' },
-  { id: 'acceptable-use', label: '10. Acceptable Use & Conduct' },
-  { id: 'disclaimers-liability', label: '11. Disclaimers & Liability Limits' },
-  { id: 'indemnification', label: '12. Indemnification' },
-  { id: 'termination', label: '13. Term & Termination' },
-  { id: 'governing-law', label: '14. Dispute Resolution & Governing Law' },
-  { id: 'modifications-contact', label: '15. Modifications & Inquiries' },
+const articles = [
+  { id: 'art-1', num: 'Article I', title: 'Acceptance, Authority & Capacity' },
+  { id: 'art-2', num: 'Article II', title: 'The Deagensie Dual Engines' },
+  { id: 'art-3', num: 'Article III', title: 'Accounts & Talent Vetting' },
+  { id: 'art-4', num: 'Article IV', title: 'Growth Lab SOWs & Delivery' },
+  { id: 'art-5', num: 'Article V', title: 'Subscriptions & Billing Terms' },
+  { id: 'art-6', num: 'Article VI', title: 'TaaS Independent Contractor Rules' },
+  { id: 'art-7', num: 'Article VII', title: 'Non-Circumvention & Conversion' },
+  { id: 'art-8', num: 'Article VIII', title: 'Intellectual Property Ownership' },
+  { id: 'art-9', num: 'Article IX', title: 'Mutual NDAs & Confidentiality' },
+  { id: 'art-10', num: 'Article X', title: 'Acceptable Platform Conduct' },
+  { id: 'art-11', num: 'Article XI', title: 'Disclaimers & Liability Limits' },
+  { id: 'art-12', num: 'Article XII', title: 'Indemnification' },
+  { id: 'art-13', num: 'Article XIII', title: 'Term & Termination' },
+  { id: 'art-14', num: 'Article XIV', title: 'Governing Law & Arbitration' },
+  { id: 'art-15', num: 'Article XV', title: 'Amendments & Legal Notices' },
 ];
 
-const activeSection = ref('agreement-eligibility');
+const selectedArticle = ref('art-1');
 
-onMounted(() => {
-  const observer = new IntersectionObserver(
-    (entries) => {
-      for (const entry of entries) {
-        if (entry.isIntersecting) {
-          activeSection.value = entry.target.id;
-          break;
-        }
-      }
-    },
-    {
-      rootMargin: '-100px 0px -60% 0px',
-      threshold: 0,
-    }
-  );
-
-  for (const s of sections) {
-    const el = document.getElementById(s.id);
-    if (el) observer.observe(el);
+function scrollToArticle(id: string) {
+  selectedArticle.value = id;
+  const el = document.getElementById(id);
+  if (el) {
+    el.scrollIntoView({ behavior: 'smooth', block: 'start' });
   }
-
-  onUnmounted(() => observer.disconnect());
-});
+}
 </script>
 
 <template>
-  <div class="min-h-screen bg-white">
-    <!-- Hero & Tabs -->
-    <PagesLegalLegalHero
-      title="Terms of Service"
-      subtitle="Terms and conditions governing access to Deagensie's Venture Growth Lab, Talent-as-a-Service (TaaS) placements, subscriptions, and digital platforms."
-      active-page="terms"
-      last-updated="October 13, 2026"
-      reading-time="11 min read"
-    />
+  <div class="min-h-screen bg-[#FAFAFC]">
+    <!-- Formal Legal Agreement Hero (Distinct from Privacy and Cookies) -->
+    <header class="border-b border-gray-200 bg-white pt-28 pb-14 lg:pt-36 lg:pb-20">
+      <div class="mx-auto w-5/6 max-w-6xl space-y-6">
+        <!-- Breadcrumbs -->
+        <div
+          class="flex items-center gap-2 text-xs font-semibold tracking-widest text-gray-400 uppercase"
+        >
+          <NuxtLink to="/" class="transition-colors hover:text-gray-900">Home</NuxtLink>
+          <span>/</span>
+          <span class="text-[#04308F]">Master Agreement</span>
+        </div>
 
-    <!-- Main Content Layout -->
-    <div class="mx-auto w-5/6 max-w-7xl py-12 lg:py-16">
-      <div class="grid grid-cols-1 gap-12 lg:grid-cols-[280px_1fr] lg:gap-16">
-        <!-- Sidebar Navigation (Desktop Sticky) -->
+        <div class="max-w-3xl space-y-4">
+          <div
+            class="inline-flex items-center gap-2 rounded-full bg-[#04308F]/10 px-3.5 py-1 text-xs font-semibold tracking-wider text-[#04308F] uppercase"
+          >
+            <Icon icon="solar:scale-bold" class="text-base" />
+            <span>Binding Legal Contract</span>
+          </div>
+
+          <h1
+            class="font-serif text-3xl font-normal tracking-tight text-gray-900 sm:text-4xl lg:text-5xl"
+          >
+            Deagensie Terms of Service
+          </h1>
+
+          <p class="text-base leading-relaxed text-gray-600 sm:text-lg">
+            The master contractual agreement governing all venture engagements, Growth
+            Subscriptions, and Talent-as-a-Service partnerships between Deagensie Inc., Client
+            Ventures, and Creative Professionals.
+          </p>
+        </div>
+
+        <!-- Contract Specification Strip -->
+        <div
+          class="flex flex-wrap items-center gap-4 border-t border-gray-100 pt-6 text-xs text-gray-500 sm:text-sm"
+        >
+          <div class="flex items-center gap-1.5">
+            <Icon icon="solar:document-text-bold" class="text-[#04308F]" />
+            <span>Contract Version: <strong>2026.2</strong></span>
+          </div>
+          <span>&bull;</span>
+          <div class="flex items-center gap-1.5">
+            <Icon icon="solar:calendar-linear" class="text-[#04308F]" />
+            <span>Effective Date: <strong>October 13, 2026</strong></span>
+          </div>
+          <span>&bull;</span>
+          <div class="flex items-center gap-1.5">
+            <Icon icon="solar:global-linear" class="text-[#04308F]" />
+            <span>Governing Law: <strong>State of Delaware, USA</strong></span>
+          </div>
+          <span>&bull;</span>
+          <div class="flex items-center gap-1.5">
+            <Icon icon="solar:shield-check-bold" class="text-emerald-600" />
+            <span>Dispute Forum: <strong>Binding AAA Arbitration</strong></span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Key Terms Executive Summary for Founders & Creatives -->
+    <section class="border-b border-gray-200 bg-gray-50/70 py-10">
+      <div class="mx-auto w-5/6 max-w-6xl space-y-6">
+        <h3 class="text-xs font-bold tracking-widest text-gray-500 uppercase">
+          Contract Highlights at a Glance
+        </h3>
+
+        <div class="grid gap-6 md:grid-cols-3">
+          <div class="space-y-3 rounded-2xl border border-gray-200 bg-white p-6 shadow-xs">
+            <div
+              class="flex size-10 items-center justify-center rounded-xl bg-[#04308F]/10 text-[#04308F]"
+            >
+              <Icon icon="solar:buildings-bold" class="text-xl" />
+            </div>
+            <h4 class="font-bold text-gray-900">For Client Ventures</h4>
+            <ul class="space-y-2 text-xs text-gray-600">
+              <li>
+                &bull; <strong>Full IP Transfer:</strong> Complete deliverable ownership transfers
+                upon invoice settlement.
+              </li>
+              <li>
+                &bull; <strong>7-Day Placement Guarantee:</strong> Free replacement candidate if
+                talent does not match benchmark.
+              </li>
+              <li>
+                &bull; <strong>Mutual Confidentiality:</strong> Proprietary roadmap and code
+                protected under built-in NDA.
+              </li>
+            </ul>
+          </div>
+
+          <div class="space-y-3 rounded-2xl border border-gray-200 bg-white p-6 shadow-xs">
+            <div
+              class="flex size-10 items-center justify-center rounded-xl bg-teal-50 text-teal-700"
+            >
+              <Icon icon="solar:user-bold" class="text-xl" />
+            </div>
+            <h4 class="font-bold text-gray-900">For Creative Talent</h4>
+            <ul class="space-y-2 text-xs text-gray-600">
+              <li>
+                &bull; <strong>Independent Contractor:</strong> Flexible, autonomous professional
+                classification.
+              </li>
+              <li>
+                &bull; <strong>Guaranteed Disbursement:</strong> Prompt milestone payouts via secure
+                channels.
+              </li>
+              <li>
+                &bull; <strong>Portfolio Rights:</strong> Reasonable display rights for delivered
+                case studies (unless barred by NDA).
+              </li>
+            </ul>
+          </div>
+
+          <div class="space-y-3 rounded-2xl border border-gray-200 bg-white p-6 shadow-xs">
+            <div
+              class="flex size-10 items-center justify-center rounded-xl bg-amber-50 text-amber-700"
+            >
+              <Icon icon="solar:shield-warning-bold" class="text-xl" />
+            </div>
+            <h4 class="font-bold text-gray-900">Platform Protections</h4>
+            <ul class="space-y-2 text-xs text-gray-600">
+              <li>
+                &bull; <strong>Non-Circumvention:</strong> 12-month direct hire restriction outside
+                Deagensie.
+              </li>
+              <li>
+                &bull; <strong>Conversion Fee:</strong> Standard 20% annualized fee for converting
+                talent into full-time staff.
+              </li>
+              <li>
+                &bull; <strong>Anti-Scraping:</strong> Reverse engineering or bot extraction
+                strictly prohibited.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Main Contract Layout: Sticky Article Index + Articles Column -->
+    <div class="mx-auto w-5/6 max-w-6xl py-12 lg:py-16">
+      <div class="grid grid-cols-1 gap-10 lg:grid-cols-[280px_1fr] lg:gap-14">
+        <!-- Sticky Left Index -->
         <aside class="hidden lg:block">
-          <div class="sticky top-28 space-y-6">
-            <div class="rounded-2xl border border-gray-100 bg-gray-50/80 p-5">
-              <h3 class="mb-4 text-xs font-bold tracking-wider text-gray-900 uppercase">
-                Contents
-              </h3>
-              <nav aria-label="Table of Contents" class="space-y-1">
-                <a
-                  v-for="item in sections"
-                  :key="item.id"
-                  :href="`#${item.id}`"
-                  :class="[
-                    'block rounded-lg px-3 py-2 text-xs font-medium transition-all duration-150',
-                    activeSection === item.id
-                      ? 'bg-[#04308F] font-semibold text-white shadow-xs'
-                      : 'text-gray-600 hover:bg-gray-200/60 hover:text-gray-900',
-                  ]"
-                >
-                  {{ item.label }}
-                </a>
-              </nav>
-            </div>
-
-            <!-- Sidebar Legal Note -->
-            <div class="rounded-2xl border border-blue-100 bg-blue-50/60 p-5 text-xs text-gray-700">
-              <div class="mb-2 flex items-center gap-2 font-semibold text-[#04308F]">
-                <Icon icon="solar:document-text-bold" class="text-base" />
-                <span>Enterprise MSAs</span>
-              </div>
-              <p class="leading-relaxed text-gray-600">
-                Are you an enterprise venture requiring a custom Master Services Agreement?
-              </p>
-              <NuxtLink
-                to="/contact"
-                class="mt-3 inline-block font-semibold text-[#04308F] hover:underline"
+          <div
+            class="sticky top-28 space-y-4 rounded-2xl border border-gray-200 bg-white p-5 shadow-xs"
+          >
+            <h4 class="text-xs font-bold tracking-wider text-gray-900 uppercase">
+              Articles of Agreement
+            </h4>
+            <nav class="space-y-1">
+              <button
+                v-for="art in articles"
+                :key="art.id"
+                type="button"
+                :class="[
+                  'block w-full rounded-lg px-2.5 py-1.5 text-left text-xs transition-colors',
+                  selectedArticle === art.id
+                    ? 'bg-[#04308F] font-semibold text-white'
+                    : 'text-gray-600 hover:bg-gray-100 hover:text-gray-900',
+                ]"
+                @click="scrollToArticle(art.id)"
               >
-                Schedule Legal Discussion &rarr;
-              </NuxtLink>
-            </div>
+                <span class="block font-mono text-[10px] opacity-75">{{ art.num }}</span>
+                <span>{{ art.title }}</span>
+              </button>
+            </nav>
           </div>
         </aside>
 
-        <!-- Document Body -->
-        <article class="prose-like space-y-12 text-gray-700">
-          <!-- Key Takeaways Highlight Box -->
-          <div class="rounded-3xl border border-blue-100 bg-blue-50/40 p-6 sm:p-8">
-            <div class="mb-3 flex items-center gap-2.5">
-              <div
-                class="flex h-8 w-8 items-center justify-center rounded-full bg-[#04308F] text-white"
-              >
-                <Icon icon="solar:scale-bold" class="text-lg" />
-              </div>
-              <h3 class="font-serif text-lg font-bold text-gray-900">Key Terms Summary</h3>
-            </div>
-            <ul class="grid gap-3 pt-2 text-sm text-gray-700 sm:grid-cols-2">
-              <li class="flex items-start gap-2.5">
-                <Icon icon="solar:check-circle-bold" class="mt-0.5 shrink-0 text-[#04308F]" />
-                <span
-                  ><strong>Deliverable Ownership:</strong> Clients gain complete IP ownership over
-                  final deliverables upon full invoice payment.</span
-                >
+        <!-- Articles Legal Text -->
+        <div class="space-y-10 text-sm leading-relaxed text-gray-700">
+          <!-- Article 1 -->
+          <article
+            id="art-1"
+            class="scroll-mt-32 space-y-3 rounded-2xl border border-gray-200 bg-white p-6 shadow-xs sm:p-8"
+          >
+            <span class="font-mono text-xs font-bold text-[#04308F] uppercase">Article I</span>
+            <h3 class="font-serif text-xl font-normal text-gray-900">
+              Acceptance of Terms, Authority & Capacity
+            </h3>
+            <p>
+              By accessing the Deagensie website (including <code>deagensie.com</code>), executing a
+              Statement of Work (&ldquo;SOW&rdquo;), registering via
+              <code>/register/business</code> or <code>/register/creative</code>, or subscribing to
+              a growth plan, you agree to be bound by these Terms of Service.
+            </p>
+            <p>
+              You represent and warrant that: (a) you are at least eighteen (18) years of age; (b)
+              you possess legal authority to bind yourself or the corporate entity you represent;
+              and (c) your use of our platform complies with all applicable local, national, and
+              international laws.
+            </p>
+          </article>
+
+          <!-- Article 2 -->
+          <article
+            id="art-2"
+            class="scroll-mt-32 space-y-3 rounded-2xl border border-gray-200 bg-white p-6 shadow-xs sm:p-8"
+          >
+            <span class="font-mono text-xs font-bold text-[#04308F] uppercase">Article II</span>
+            <h3 class="font-serif text-xl font-normal text-gray-900">The Deagensie Dual Engines</h3>
+            <p>
+              Deagensie delivers venture acceleration services through two integrated mechanisms:
+            </p>
+            <ul class="list-disc space-y-1 pl-5 text-gray-600">
+              <li>
+                <strong>Venture's Growth Lab:</strong> Execution across Strategy, Branding, Growth
+                Marketing, and Digital Product Engineering on a project or subscription basis.
               </li>
-              <li class="flex items-start gap-2.5">
-                <Icon icon="solar:check-circle-bold" class="mt-0.5 shrink-0 text-[#04308F]" />
-                <span
-                  ><strong>Contractor Relationship:</strong> Creative professionals in our TaaS
-                  network operate as independent contractors, not employees.</span
-                >
-              </li>
-              <li class="flex items-start gap-2.5">
-                <Icon icon="solar:check-circle-bold" class="mt-0.5 shrink-0 text-[#04308F]" />
-                <span
-                  ><strong>Non-Circumvention:</strong> Clients and matched talent agree not to
-                  bypass Deagensie for direct unmediated contracts without a buyout fee.</span
-                >
-              </li>
-              <li class="flex items-start gap-2.5">
-                <Icon icon="solar:check-circle-bold" class="mt-0.5 shrink-0 text-[#04308F]" />
-                <span
-                  ><strong>Built-In Confidentiality:</strong> Proprietary client strategies, source
-                  code, and brand secrets are shielded under mutual NDA terms.</span
-                >
+              <li>
+                <strong>Talent-as-a-Service (TaaS):</strong> AI-assisted placement engine matching
+                vetted global creative professionals with ventures for sprint or embedded bandwidth.
               </li>
             </ul>
-          </div>
+          </article>
 
-          <!-- Section 1 -->
-          <section id="agreement-eligibility" class="scroll-mt-32 space-y-4">
-            <h2
-              class="border-b border-gray-100 pb-3 font-serif text-2xl font-normal text-gray-900 sm:text-3xl"
-            >
-              1. Agreement to Terms & Eligibility
-            </h2>
-            <p class="leading-relaxed">
-              These Terms of Service (&ldquo;Terms&rdquo;) constitute a legally binding agreement
-              between you (&ldquo;User&rdquo;, &ldquo;Client&rdquo;, &ldquo;Creative&rdquo;, or
-              &ldquo;You&rdquo;) and Deagensie Inc. (&ldquo;Deagensie&rdquo;, &ldquo;Company&rdquo;,
-              &ldquo;we&rdquo;, &ldquo;our&rdquo;, or &ldquo;us&rdquo;). These Terms govern your
-              access to and use of Deagensie's website, web applications, project management
-              portals, subscription services, and related offerings.
+          <!-- Article 3 -->
+          <article
+            id="art-3"
+            class="scroll-mt-32 space-y-3 rounded-2xl border border-gray-200 bg-white p-6 shadow-xs sm:p-8"
+          >
+            <span class="font-mono text-xs font-bold text-[#04308F] uppercase">Article III</span>
+            <h3 class="font-serif text-xl font-normal text-gray-900">
+              Accounts, Onboarding & Talent Vetting
+            </h3>
+            <p>
+              Users must provide accurate, current, and verifiable information during onboarding.
+              Acceptance into our TaaS network is discretionary, subject to portfolio reviews,
+              technical benchmarks, and background confirmations. Deagensie reserves the right to
+              suspend any account submitting falsified credentials.
             </p>
-            <p class="leading-relaxed">
-              By accessing our website, creating an account, registering as a business or creative,
-              or executing a Statement of Work, you represent and warrant that:
-            </p>
-            <ul class="list-disc space-y-2 pl-6">
-              <li>
-                You are at least eighteen (18) years of age and possess full legal capacity to enter
-                into binding agreements.
-              </li>
-              <li>
-                If you represent a corporate entity or organization, you hold the requisite
-                corporate power and authorization to bind that entity to these Terms.
-              </li>
-              <li>
-                All information provided during onboarding is accurate, current, and complete.
-              </li>
-            </ul>
-          </section>
+          </article>
 
-          <!-- Section 2 -->
-          <section id="ecosystem-scope" class="scroll-mt-32 space-y-4">
-            <h2
-              class="border-b border-gray-100 pb-3 font-serif text-2xl font-normal text-gray-900 sm:text-3xl"
-            >
-              2. The Deagensie Dual Engines
-            </h2>
-            <p class="leading-relaxed">
-              Deagensie operates through two distinct, synergistic engines designed to scale modern
-              businesses:
+          <!-- Article 4 -->
+          <article
+            id="art-4"
+            class="scroll-mt-32 space-y-3 rounded-2xl border border-gray-200 bg-white p-6 shadow-xs sm:p-8"
+          >
+            <span class="font-mono text-xs font-bold text-[#04308F] uppercase">Article IV</span>
+            <h3 class="font-serif text-xl font-normal text-gray-900">
+              Growth Lab SOWs & Delivery Milestone Review
+            </h3>
+            <p>
+              Project engagements are governed by bespoke Statements of Work detailing deliverables,
+              timelines, and milestones. Clients have five (5) business days upon deliverable
+              submission to review and submit change requests within the agreed SOW scope. In the
+              absence of written rejection, deliverables are deemed accepted.
             </p>
-            <div class="grid gap-4 pt-2 sm:grid-cols-2">
-              <div class="rounded-2xl border border-gray-100 bg-gray-50/70 p-5">
-                <h4 class="flex items-center gap-2 font-bold text-gray-900">
-                  <Icon icon="solar:rocket-bold" class="text-[#04308F]" />
-                  Engine 1: Venture&rsquo;s Growth Lab
-                </h4>
-                <p class="mt-2 text-sm text-gray-600">
-                  Full-stack venture execution across 01 Strategy (market analysis, growth
-                  architecture), 02 Branding (identity, visual language), 03 Marketing (performance
-                  campaigns, funnels), and 04 Digital Platforms (web apps, product design,
-                  engineering). Engagements are delivered via bespoke Statements of Work (SOW) or
-                  Growth Subscriptions.
-                </p>
-              </div>
-              <div class="rounded-2xl border border-gray-100 bg-gray-50/70 p-5">
-                <h4 class="flex items-center gap-2 font-bold text-gray-900">
-                  <Icon icon="solar:cpu-bold" class="text-[#05DED5]" />
-                  Engine 2: Talent-as-a-Service (TaaS)
-                </h4>
-                <p class="mt-2 text-sm text-gray-600">
-                  A predictive AI-matched talent network placing vetted global creative
-                  professionals (designers, engineers, copywriters, creative directors) into
-                  fast-scaling ventures on dedicated, fractional, or sprint-based models.
-                </p>
-              </div>
-            </div>
-          </section>
+          </article>
 
-          <!-- Section 3 -->
-          <section id="user-accounts" class="scroll-mt-32 space-y-4">
-            <h2
-              class="border-b border-gray-100 pb-3 font-serif text-2xl font-normal text-gray-900 sm:text-3xl"
-            >
-              3. User Accounts & Vetting Process
-            </h2>
-            <p class="leading-relaxed">
-              Certain features require registration via our dedicated flows (<code
-                >/register/business</code
-              >
-              or <code>/register/creative</code>) or joining the early access waitlist
-              (<code>/waitlist</code>).
+          <!-- Article 5 -->
+          <article
+            id="art-5"
+            class="scroll-mt-32 space-y-3 rounded-2xl border border-gray-200 bg-white p-6 shadow-xs sm:p-8"
+          >
+            <span class="font-mono text-xs font-bold text-[#04308F] uppercase">Article V</span>
+            <h3 class="font-serif text-xl font-normal text-gray-900">
+              Growth Subscriptions & Billing Terms
+            </h3>
+            <p>
+              Subscriptions (<code>/subscription</code>) are billed in advance on recurring monthly
+              or quarterly cycles. Subscriptions renew automatically unless cancelled in writing at
+              least fourteen (14) days prior to renewal. Delivered sprint bandwidth is
+              non-refundable.
             </p>
-            <ul class="list-disc space-y-2 pl-6">
-              <li>
-                <strong>Account Security:</strong> You are responsible for safeguarding your
-                credentials and for all activities occurring under your account. You must notify
-                Deagensie immediately of any unauthorized access.
-              </li>
-              <li>
-                <strong>Vetting Standards:</strong> Acceptance into our creative talent network is
-                discretionary and subject to portfolio review, skills verification, identity
-                confirmation, and professional references. Deagensie reserves the right to decline
-                or suspend any application that fails to meet quality benchmarks.
-              </li>
-              <li>
-                <strong>Accurate Representation:</strong> Creative talent must accurately represent
-                their past project contributions, technical proficiencies, and geographical
-                residency. Misrepresentation constitutes material breach and causes immediate
-                expulsion.
-              </li>
-            </ul>
-          </section>
+          </article>
 
-          <!-- Section 4 -->
-          <section id="growth-lab-terms" class="scroll-mt-32 space-y-4">
-            <h2
-              class="border-b border-gray-100 pb-3 font-serif text-2xl font-normal text-gray-900 sm:text-3xl"
-            >
-              4. Growth Lab Engagements & Statements of Work
-            </h2>
-            <p class="leading-relaxed">
-              When a Client engages the Venture Growth Lab for project-based initiatives, the
-              specific deliverables, milestones, pricing, and schedules are governed by an executed
-              Statement of Work (&ldquo;SOW&rdquo;) or digital service agreement:
+          <!-- Article 6 -->
+          <article
+            id="art-6"
+            class="scroll-mt-32 space-y-3 rounded-2xl border border-gray-200 bg-white p-6 shadow-xs sm:p-8"
+          >
+            <span class="font-mono text-xs font-bold text-[#04308F] uppercase">Article VI</span>
+            <h3 class="font-serif text-xl font-normal text-gray-900">
+              TaaS Independent Contractor Rules
+            </h3>
+            <p>
+              Creative professionals placed through Deagensie operate strictly as independent
+              contractors. Neither talent nor Client shall represent the relationship as
+              employer-employee, agency, or partnership unless governed by a dedicated Employer of
+              Record (EOR) addendum.
             </p>
-            <ul class="list-disc space-y-2 pl-6">
-              <li>
-                <strong>Scope of Deliverables:</strong> Deagensie will perform the strategic,
-                design, branding, and technical services outlined in the applicable SOW in
-                accordance with high industry standards.
-              </li>
-              <li>
-                <strong>Client Cooperation:</strong> Timely project completion requires prompt
-                Client feedback, asset handovers, and milestone sign-offs. Delays in Client
-                approvals will automatically extend project schedules.
-              </li>
-              <li>
-                <strong>Review & Acceptance:</strong> Clients have five (5) business days following
-                deliverable submission to review and submit revision requests within the agreed SOW
-                scope. In the absence of written feedback within this period, deliverables are
-                deemed accepted.
-              </li>
-            </ul>
-          </section>
+          </article>
 
-          <!-- Section 5 -->
-          <section id="subscriptions-billing" class="scroll-mt-32 space-y-4">
-            <h2
-              class="border-b border-gray-100 pb-3 font-serif text-2xl font-normal text-gray-900 sm:text-3xl"
-            >
-              5. Growth Subscriptions & Payment Terms
-            </h2>
-            <p class="leading-relaxed">
-              Deagensie offers Growth Subscriptions (<code>/subscription</code>) providing dedicated
-              monthly creative bandwidth and ongoing venture support:
+          <!-- Article 7 -->
+          <article
+            id="art-7"
+            class="scroll-mt-32 space-y-3 rounded-2xl border border-amber-200 bg-amber-50/40 p-6 shadow-xs sm:p-8"
+          >
+            <span class="font-mono text-xs font-bold text-amber-800 uppercase">Article VII</span>
+            <h3 class="font-serif text-xl font-normal text-amber-950">
+              Non-Circumvention & Talent Conversion Covenant
+            </h3>
+            <p class="text-amber-950">
+              Clients agree not to bypass Deagensie by contracting directly with introduced talent
+              for twelve (12) months following introduction or project completion.
             </p>
-            <ul class="list-disc space-y-2 pl-6">
-              <li>
-                <strong>Billing Cycle:</strong> Subscriptions are billed in advance on a recurring
-                monthly or quarterly cycle via credit card, wire transfer, or authorized automated
-                payment gateway.
-              </li>
-              <li>
-                <strong>Auto-Renewal:</strong> Subscriptions renew automatically unless cancelled in
-                writing at least fourteen (14) days prior to the start of the next billing cycle.
-              </li>
-              <li>
-                <strong>Pause & Cancellation:</strong> Clients in good standing may pause their
-                subscription bandwidth for up to thirty (30) days per calendar year with advance
-                notice.
-              </li>
-              <li>
-                <strong>Taxes:</strong> All quoted prices are exclusive of federal, state, local, or
-                value-added taxes (VAT/GST), which are the sole responsibility of the Client.
-              </li>
-              <li>
-                <strong>No Refunds for Delivered Sprints:</strong> Because creative bandwidth and
-                strategic resources are allocated upon subscription commencement, payments for
-                active or past sprint cycles are non-refundable.
-              </li>
-            </ul>
-          </section>
+            <p class="font-semibold text-amber-950">
+              To convert a Deagensie creative into a direct full-time employee or direct contractor,
+              Client must pay Deagensie a Talent Conversion Fee equal to twenty percent (20%) of the
+              annualized compensation or negotiated buyout fee.
+            </p>
+          </article>
 
-          <!-- Section 6 -->
-          <section id="taas-marketplace" class="scroll-mt-32 space-y-4">
-            <h2
-              class="border-b border-gray-100 pb-3 font-serif text-2xl font-normal text-gray-900 sm:text-3xl"
-            >
-              6. Talent-as-a-Service (TaaS) & Placement Terms
-            </h2>
-            <p class="leading-relaxed">
-              The following terms govern engagements facilitated through our Talent-as-a-Service
-              (<code>/creatives</code>) engine:
+          <!-- Article 8 -->
+          <article
+            id="art-8"
+            class="scroll-mt-32 space-y-3 rounded-2xl border border-gray-200 bg-white p-6 shadow-xs sm:p-8"
+          >
+            <span class="font-mono text-xs font-bold text-[#04308F] uppercase">Article VIII</span>
+            <h3 class="font-serif text-xl font-normal text-gray-900">
+              Intellectual Property Ownership & Handover
+            </h3>
+            <p>
+              Upon complete payment of all applicable fees, all right, title, and interest in
+              bespoke final deliverables (custom design, logos, marketing copy, and software code)
+              produced specifically for Client shall transfer exclusively to Client as &ldquo;work
+              made for hire&rdquo;.
             </p>
-            <div class="space-y-3 rounded-2xl border border-gray-100 bg-gray-50/70 p-5">
-              <h4 class="font-bold text-gray-900">Independent Contractor Classification</h4>
-              <p class="text-sm text-gray-600">
-                Creative professionals placed through Deagensie operate strictly as independent
-                contractors. Nothing in these Terms shall be construed as creating an
-                employer-employee, agency, partnership, or joint venture relationship between
-                Deagensie and talent, or between Client and talent, unless an explicit formal
-                Employer of Record (EOR) addendum is executed.
-              </p>
-              <h4 class="pt-2 font-bold text-gray-900">Talent Quality Guarantee</h4>
-              <p class="text-sm text-gray-600">
-                If a Client notifies Deagensie within the first seven (7) business days of an
-                embedded placement that the matched creative does not meet the specified skill
-                benchmarks, Deagensie will provide a replacement candidate at no additional matching
-                charge, or credit the unused placement hours.
-              </p>
-            </div>
-          </section>
+            <p>
+              Deagensie retains proprietary rights to its underlying AI models, frameworks, and
+              pre-existing code libraries.
+            </p>
+          </article>
 
-          <!-- Section 7 -->
-          <section id="non-circumvention" class="scroll-mt-32 space-y-4">
-            <h2
-              class="border-b border-gray-100 pb-3 font-serif text-2xl font-normal text-gray-900 sm:text-3xl"
-            >
-              7. Non-Circumvention & Direct Hiring Restrictions
-            </h2>
-            <p class="leading-relaxed">
-              Deagensie invests substantial capital, algorithmic engineering, and vetting resources
-              to discover, evaluate, and present top global creative talent to client ventures:
+          <!-- Article 9 -->
+          <article
+            id="art-9"
+            class="scroll-mt-32 space-y-3 rounded-2xl border border-gray-200 bg-white p-6 shadow-xs sm:p-8"
+          >
+            <span class="font-mono text-xs font-bold text-[#04308F] uppercase">Article IX</span>
+            <h3 class="font-serif text-xl font-normal text-gray-900">
+              Mutual Non-Disclosure & Confidentiality
+            </h3>
+            <p>
+              Both parties agree to hold all proprietary business plans, code, investor decks, and
+              customer data in strict confidence. Neither party shall disclose confidential
+              materials to third parties without prior authorization.
             </p>
-            <div class="rounded-2xl border border-amber-200 bg-amber-50/50 p-5">
-              <div class="flex items-center gap-2 font-bold text-amber-900">
-                <Icon icon="solar:shield-warning-bold" class="text-lg" />
-                <span>Non-Circumvention Covenant</span>
-              </div>
-              <p class="mt-2 text-sm leading-relaxed text-amber-950">
-                During the term of any engagement and for a period of twelve (12) months following
-                the introduction of a creative professional or completion of an engagement, Clients
-                agree not to solicit, recruit, employ, or contract directly with that talent outside
-                of the Deagensie platform without Deagensie&rsquo;s prior written consent.
-              </p>
-              <p class="mt-2 text-sm leading-relaxed text-amber-950">
-                If a Client desires to convert a Deagensie creative into a direct full-time employee
-                or direct independent contractor, the Client must pay Deagensie a
-                <strong>Talent Conversion Fee</strong> equal to twenty percent (20%) of the
-                professional&rsquo;s first-year annualized compensation or agreed enterprise buyout
-                fee.
-              </p>
-            </div>
-          </section>
+          </article>
 
-          <!-- Section 8 -->
-          <section id="intellectual-property" class="scroll-mt-32 space-y-4">
-            <h2
-              class="border-b border-gray-100 pb-3 font-serif text-2xl font-normal text-gray-900 sm:text-3xl"
-            >
-              8. Intellectual Property Rights & Deliverable Handover
-            </h2>
-            <p class="leading-relaxed">
-              We maintain crystal-clear boundaries regarding intellectual property ownership:
+          <!-- Article 10 -->
+          <article
+            id="art-10"
+            class="scroll-mt-32 space-y-3 rounded-2xl border border-gray-200 bg-white p-6 shadow-xs sm:p-8"
+          >
+            <span class="font-mono text-xs font-bold text-[#04308F] uppercase">Article X</span>
+            <h3 class="font-serif text-xl font-normal text-gray-900">
+              Acceptable Platform Conduct & Prohibited Acts
+            </h3>
+            <p>
+              Users shall not decompile or reverse engineer the AI matching engine, deploy scraping
+              bots, upload infringing materials, harass ecosystem participants, or attempt fee
+              evasion.
             </p>
-            <ul class="list-disc space-y-2 pl-6">
-              <li>
-                <strong>Client Deliverables (Work Made for Hire):</strong> Upon complete payment of
-                all applicable fees and invoices, all right, title, and interest in bespoke
-                deliverables produced specifically for Client (including custom brand logos,
-                typography systems, marketing copy, UI design assets, and custom source code) shall
-                vest exclusively in the Client.
-              </li>
-              <li>
-                <strong>Deagensie Pre-Existing IP:</strong> Deagensie retains full ownership of its
-                proprietary tools, algorithmic models, predictive AI matching software, reusable UI
-                frameworks, and methodologies (&ldquo;Company Pre-Existing IP&rdquo;). Clients
-                receive a perpetual, non-exclusive, royalty-free license to use any Company
-                Pre-Existing IP embedded within deliverables.
-              </li>
-              <li>
-                <strong>Portfolio Display Rights:</strong> Unless protected by a strict, pre-signed
-                Non-Disclosure Agreement (NDA), Deagensie and participating creative talent retain
-                the reasonable right to showcase delivered work, client logos, and non-confidential
-                case studies in marketing materials and portfolio presentations (as seen on
-                <code>/portfolio</code>).
-              </li>
-            </ul>
-          </section>
+          </article>
 
-          <!-- Section 9 -->
-          <section id="confidentiality-nda" class="scroll-mt-32 space-y-4">
-            <h2
-              class="border-b border-gray-100 pb-3 font-serif text-2xl font-normal text-gray-900 sm:text-3xl"
-            >
-              9. Mutual Confidentiality & NDAs
-            </h2>
-            <p class="leading-relaxed">
-              Both parties agree that any proprietary information disclosed during registrations,
-              discovery calls, SOW execution, or platform messaging marked as confidential (or which
-              by its nature should reasonably be understood to be confidential) shall be held in
-              strict confidence.
+          <!-- Article 11 -->
+          <article
+            id="art-11"
+            class="scroll-mt-32 space-y-3 rounded-2xl border border-gray-200 bg-white p-6 shadow-xs sm:p-8"
+          >
+            <span class="font-mono text-xs font-bold text-[#04308F] uppercase">Article XI</span>
+            <h3 class="font-serif text-xl font-normal text-gray-900">
+              Disclaimers & Limitation of Liability
+            </h3>
+            <p class="text-xs font-bold text-gray-500 uppercase">Standard Commercial Limitation</p>
+            <p class="text-xs leading-relaxed text-gray-600">
+              TO THE MAXIMUM EXTENT PERMITTED BY LAW, DEAGENSIE’S TOTAL AGGREGATE LIABILITY ARISING
+              OUT OF OR RELATING TO THESE TERMS SHALL BE CAPPED AT THE FEES ACTUALLY PAID BY CLIENT
+              TO DEAGENSIE DURING THE SIX (6) MONTHS PRECEDING THE CLAIM.
             </p>
-            <p class="leading-relaxed">
-              Confidential information includes business strategies, investor pitch decks,
-              unreleased product features, customer lists, financial data, and technical
-              specifications. Neither party shall disclose confidential information to any third
-              party without prior written consent, except to employees, subcontractors, and legal
-              counsel bound by equivalent confidentiality covenants.
-            </p>
-          </section>
+          </article>
 
-          <!-- Section 10 -->
-          <section id="acceptable-use" class="scroll-mt-32 space-y-4">
-            <h2
-              class="border-b border-gray-100 pb-3 font-serif text-2xl font-normal text-gray-900 sm:text-3xl"
+          <!-- Article 12, 13, 14, 15 -->
+          <article
+            id="art-12"
+            class="scroll-mt-32 space-y-3 rounded-2xl border border-gray-200 bg-white p-6 shadow-xs sm:p-8"
+          >
+            <span class="font-mono text-xs font-bold text-[#04308F] uppercase"
+              >Article XII &bull; XIII &bull; XIV &bull; XV</span
             >
-              10. Acceptable Use & Prohibited Conduct
-            </h2>
-            <p class="leading-relaxed">
-              You agree to utilize Deagensie solely for lawful, professional purposes. You shall
-              not:
+            <h3 class="font-serif text-xl font-normal text-gray-900">
+              Indemnification, Governing Law & Binding Arbitration
+            </h3>
+            <p>
+              These Terms are governed by the laws of the State of Delaware, United States. Any
+              disputes unresolved through informal negotiations shall be settled through
+              confidential, binding arbitration administered by the American Arbitration Association
+              (AAA). Both parties waive the right to participate in class action litigation.
             </p>
-            <ul class="list-disc space-y-2 pl-6">
-              <li>
-                Reverse engineer, decompile, or extract the source code or AI matching algorithms of
-                the Deagensie platform.
-              </li>
-              <li>
-                Deploy automated bots, scrapers, or crawlers to extract platform listings, creative
-                portfolios, or pricing frameworks.
-              </li>
-              <li>
-                Submit false, plagiarized, infringing, defamatory, or unlawful materials in
-                registration profiles or project briefs.
-              </li>
-              <li>
-                Circumvent or manipulate payment mechanisms, invoicing structures, or fee
-                obligations.
-              </li>
-              <li>
-                Engage in harassment, discrimination, or abusive conduct toward talent, clients, or
-                Deagensie staff.
-              </li>
-            </ul>
-          </section>
-
-          <!-- Section 11 -->
-          <section id="disclaimers-liability" class="scroll-mt-32 space-y-4">
-            <h2
-              class="border-b border-gray-100 pb-3 font-serif text-2xl font-normal text-gray-900 sm:text-3xl"
-            >
-              11. Disclaimers & Limitation of Liability
-            </h2>
-            <div class="space-y-3 rounded-2xl border border-gray-200 bg-gray-50/70 p-5 text-sm">
-              <p class="text-xs font-bold tracking-wider text-gray-900 uppercase">
-                A. Warranty Disclaimer
-              </p>
-              <p class="leading-relaxed text-gray-600">
-                EXCEPT AS EXPRESSLY SET FORTH IN AN EXECUTED STATEMENT OF WORK, THE DEAGENSIE
-                PLATFORM AND SERVICES ARE PROVIDED &ldquo;AS IS&rdquo; AND &ldquo;AS
-                AVAILABLE&rdquo; WITHOUT WARRANTIES OF ANY KIND, EXPRESS OR IMPLIED. WHILE WE STRIVE
-                FOR UNMATCHED EXCELLENCE, WE DO NOT GUARANTEE THAT SPECIFIC BRANDING, MARKETING
-                CAMPAIGNS, OR PLATFORM BUILDS WILL YIELD SPECIFIC REVENUE, CAPITAL RAISING, OR USER
-                ACQUISITION OUTCOMES.
-              </p>
-              <p class="pt-2 text-xs font-bold tracking-wider text-gray-900 uppercase">
-                B. Liability Limitation
-              </p>
-              <p class="leading-relaxed text-gray-600">
-                TO THE MAXIMUM EXTENT PERMITTED BY LAW, IN NO EVENT SHALL DEAGENSIE, ITS DIRECTORS,
-                EMPLOYEES, OR AGENTS BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL,
-                OR PUNITIVE DAMAGES (INCLUDING LOSS OF PROFITS, DATA, GOODWILL, OR BUSINESS
-                INTERRUPTION) ARISING FROM OR RELATED TO THESE TERMS. DEAGENSIE&rsquo;S TOTAL
-                AGGREGATE LIABILITY UNDER THESE TERMS SHALL BE CAPPED AT THE FEES ACTUALLY PAID BY
-                CLIENT TO DEAGENSIE DURING THE SIX (6) MONTHS PRECEDING THE CLAIM.
-              </p>
-            </div>
-          </section>
-
-          <!-- Section 12 -->
-          <section id="indemnification" class="scroll-mt-32 space-y-4">
-            <h2
-              class="border-b border-gray-100 pb-3 font-serif text-2xl font-normal text-gray-900 sm:text-3xl"
-            >
-              12. Indemnification
-            </h2>
-            <p class="leading-relaxed">
-              You agree to defend, indemnify, and hold harmless Deagensie, its affiliates, officers,
-              directors, and contractors from and against any third-party claims, liabilities,
-              damages, losses, and reasonable legal fees arising out of or related to: (a) your
-              breach of these Terms; (b) any materials or content provided by you that infringe upon
-              third-party intellectual property or privacy rights; or (c) your willful misconduct or
-              violation of applicable laws.
-            </p>
-          </section>
-
-          <!-- Section 13 -->
-          <section id="termination" class="scroll-mt-32 space-y-4">
-            <h2
-              class="border-b border-gray-100 pb-3 font-serif text-2xl font-normal text-gray-900 sm:text-3xl"
-            >
-              13. Term & Termination
-            </h2>
-            <p class="leading-relaxed">
-              These Terms remain in full force while you access our website or maintain an active
-              account. Either party may terminate an engagement for cause if the other party
-              materially breaches these Terms and fails to cure such breach within fourteen (14)
-              days of written notice.
-            </p>
-            <p class="leading-relaxed">
-              Upon termination, Client shall pay for all completed work and approved hours incurred
-              up to the effective termination date. Provisions concerning IP ownership of paid
-              deliverables, non-circumvention, confidentiality, liability limits, and dispute
-              resolution shall survive termination.
-            </p>
-          </section>
-
-          <!-- Section 14 -->
-          <section id="governing-law" class="scroll-mt-32 space-y-4">
-            <h2
-              class="border-b border-gray-100 pb-3 font-serif text-2xl font-normal text-gray-900 sm:text-3xl"
-            >
-              14. Dispute Resolution, Arbitration & Governing Law
-            </h2>
-            <p class="leading-relaxed">
-              These Terms shall be governed by and construed in accordance with the laws of the
-              State of Delaware, United States, without regard to conflict of law principles.
-            </p>
-            <ul class="list-disc space-y-2 pl-6">
-              <li>
-                <strong>Informal Negotiation:</strong> In the event of any controversy or dispute,
-                the parties agree to first attempt in good faith to resolve the matter amicably
-                through executive negotiations for at least thirty (30) days.
-              </li>
-              <li>
-                <strong>Binding Arbitration:</strong> Any dispute unresolved through negotiations
-                shall be resolved through confidential binding arbitration administered by the
-                American Arbitration Association (AAA) under its Commercial Arbitration Rules.
-              </li>
-              <li>
-                <strong>Class Action Waiver:</strong> All proceedings shall be conducted on an
-                individual basis. You and Deagensie agree to waive any right to bring or participate
-                in any class action or representative proceeding.
-              </li>
-            </ul>
-          </section>
-
-          <!-- Section 15 -->
-          <section id="modifications-contact" class="scroll-mt-32 space-y-4">
-            <h2
-              class="border-b border-gray-100 pb-3 font-serif text-2xl font-normal text-gray-900 sm:text-3xl"
-            >
-              15. Modifications & Legal Inquiries
-            </h2>
-            <p class="leading-relaxed">
-              Deagensie reserves the right to amend these Terms periodically. We will provide notice
-              of material updates by posting the revised version on this page with an updated
-              &ldquo;Effective Date&rdquo; or via direct email communication. Continued
-              participation in the ecosystem following modifications constitutes acceptance of the
-              revised Terms.
-            </p>
-            <div class="rounded-2xl border border-gray-100 bg-gray-50 p-6 text-sm text-gray-700">
-              <p class="font-bold text-gray-900">
-                Deagensie Inc. &mdash; Legal & Governance Department
-              </p>
-              <p class="mt-1">
-                Inquiries & Formal Legal Notices:
+            <div class="border-t border-gray-100 pt-4 text-xs text-gray-600">
+              <p>
+                <strong>Formal Legal Notices:</strong>
                 <a href="mailto:legal@deagensie.com" class="text-[#04308F] underline"
                   >legal@deagensie.com</a
                 >
               </p>
-              <p class="mt-1">
-                Contract Questions:
-                <a href="mailto:contracts@deagensie.com" class="text-[#04308F] underline"
-                  >contracts@deagensie.com</a
-                >
-              </p>
-              <p class="mt-1">
-                Direct Discovery Call:
-                <NuxtLink to="/contact" class="text-[#04308F] underline"
-                  >deagensie.com/contact</NuxtLink
-                >
-              </p>
+              <p><strong>Physical Inquiries:</strong> Deagensie Inc., Legal Affairs Division</p>
             </div>
-          </section>
-        </article>
+          </article>
+        </div>
       </div>
     </div>
-
-    <!-- Bottom CTA -->
-    <PagesLegalLegalCta />
   </div>
 </template>

@@ -92,50 +92,6 @@ function handlePrint() {
           </div>
         </div>
       </div>
-
-      <!-- Legal Navigation Tabs -->
-      <div class="mt-10 border-t border-gray-100 pt-6">
-        <nav aria-label="Legal documents navigation" class="flex flex-wrap gap-2 sm:gap-3">
-          <NuxtLink
-            to="/privacy"
-            :class="[
-              'inline-flex items-center gap-2 rounded-xl px-4 py-2.5 text-xs font-semibold transition-all duration-200 sm:text-sm',
-              activePage === 'privacy'
-                ? 'bg-[#04308F] text-white shadow-md shadow-[#04308F]/20'
-                : 'border border-gray-200 bg-gray-50/60 text-gray-600 hover:border-gray-300 hover:bg-gray-100 hover:text-gray-900',
-            ]"
-          >
-            <Icon icon="solar:shield-check-bold" class="text-base" />
-            <span>Privacy Policy</span>
-          </NuxtLink>
-
-          <NuxtLink
-            to="/terms"
-            :class="[
-              'inline-flex items-center gap-2 rounded-xl px-4 py-2.5 text-xs font-semibold transition-all duration-200 sm:text-sm',
-              activePage === 'terms'
-                ? 'bg-[#04308F] text-white shadow-md shadow-[#04308F]/20'
-                : 'border border-gray-200 bg-gray-50/60 text-gray-600 hover:border-gray-300 hover:bg-gray-100 hover:text-gray-900',
-            ]"
-          >
-            <Icon icon="solar:document-text-bold" class="text-base" />
-            <span>Terms of Service</span>
-          </NuxtLink>
-
-          <NuxtLink
-            to="/cookies"
-            :class="[
-              'inline-flex items-center gap-2 rounded-xl px-4 py-2.5 text-xs font-semibold transition-all duration-200 sm:text-sm',
-              activePage === 'cookies'
-                ? 'bg-[#04308F] text-white shadow-md shadow-[#04308F]/20'
-                : 'border border-gray-200 bg-gray-50/60 text-gray-600 hover:border-gray-300 hover:bg-gray-100 hover:text-gray-900',
-            ]"
-          >
-            <Icon icon="solar:cookie-bold" class="text-base" />
-            <span>Cookie Policy</span>
-          </NuxtLink>
-        </nav>
-      </div>
     </div>
   </section>
 </template>
