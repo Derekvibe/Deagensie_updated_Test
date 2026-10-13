@@ -99,7 +99,7 @@ onUnmounted(cancelClose);
       </NuxtLink>
     </div>
     <NuxtLink
-      to="/waitlist"
+      to="https://app-deagensie-waitlist.vercel.app/"
       class="text-foreground rounded-full bg-[#05DED5] px-4 py-2 text-sm font-semibold transition-transform hover:scale-105 xl:px-6 xl:py-3 xl:text-base"
       @focus="closeDesktopMenu"
     >
@@ -214,7 +214,7 @@ onUnmounted(cancelClose);
         <div class="space-y-3">
           <p class="text-xl leading-tight font-bold">Build a Scalable Brand</p>
           <NuxtLink
-            to="/waitlist"
+            to="https://app-deagensie-waitlist.vercel.app/"
             class="inline-flex items-center gap-1.5 text-sm font-semibold text-[#04308F] hover:underline"
           >
             Enter Deagensie Waitlist
