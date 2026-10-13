@@ -16,7 +16,7 @@
           <span class="hidden lg:inline">&nbsp;<br /></span> learns, adapts, and scales.
         </p>
         <NuxtLink
-          to="/waitlist"
+          to="https://app-deagensie-waitlist.vercel.app/"
           class="font-open-sans text-foreground inline-block w-full max-w-60 rounded-full bg-[#05DED5] p-3 text-xl leading-tight font-medium shadow-md transition-transform hover:scale-105"
         >
           Work with Deagensie

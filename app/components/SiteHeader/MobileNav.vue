@@ -72,7 +72,10 @@ const open = defineModel<boolean>('open', { default: false });
                     </NuxtLink>
                   </li>
                   <li>
-                    <NuxtLink to="/waitlist" class="hover:underline">
+                    <NuxtLink
+                      to="https://app-deagensie-waitlist.vercel.app/"
+                      class="hover:underline"
+                    >
                       <Icon icon="hugeicons:arrow-right-01" />
                       Join Deagensie Waitlist
                     </NuxtLink>
@@ -171,7 +174,7 @@ const open = defineModel<boolean>('open', { default: false });
         </Accordion>
         <div class="bg-background sticky bottom-0 z-50 mx-auto mt-auto w-5/6 space-y-3 pt-4 pb-12">
           <NuxtLink
-            to="/waitlist"
+            to="https://app-deagensie-waitlist.vercel.app/"
             class="inline-block w-full rounded-full bg-[#05DED5] p-3 text-center font-semibold text-gray-950"
           >
             Enter Deagensie

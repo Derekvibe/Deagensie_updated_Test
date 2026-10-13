@@ -507,7 +507,7 @@ onUnmounted(cancelClose);
         <div class="space-y-3">
           <p class="text-xl leading-tight font-bold">Built on Integrity. Driven by Impact.</p>
           <NuxtLink
-            to="/waitlist"
+            to="https://app-deagensie-waitlist.vercel.app/"
             class="inline-flex items-center gap-1.5 text-sm font-semibold text-[#04308F] hover:underline"
           >
             Join the Ecosystem
