@@ -184,5 +184,6 @@ useHead({
       </div>
     </footer>
     <BackToTop />
+    <CookieConsent />
   </TooltipProvider>
 </template>
