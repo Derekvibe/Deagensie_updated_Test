@@ -52,28 +52,22 @@ useHead({
           </p>
           <div class="flex items-center gap-4 text-2xl text-gray-300">
             <NuxtLink
-              to="/"
+              to="https://www.linkedin.com/company/deagensie"
               class="transition-all duration-300 hover:scale-110 hover:text-[#05DED5]"
               aria-label="LinkedIn"
             >
               <Icon icon="ri:linkedin-fill" />
             </NuxtLink>
             <NuxtLink
-              to="/"
+              to="https://www.instagram.com/deagensie?mdxt=NDR1bmhhaGVic3g1"
               class="transition-all duration-300 hover:scale-110 hover:text-[#05DED5]"
               aria-label="Instagram"
             >
               <Icon icon="ri:instagram-fill" />
             </NuxtLink>
+
             <NuxtLink
-              to="/"
-              class="transition-all duration-300 hover:scale-110 hover:text-[#05DED5]"
-              aria-label="Twitter X"
-            >
-              <Icon icon="prime:twitter" />
-            </NuxtLink>
-            <NuxtLink
-              to="/"
+              to="https://www.tiktok.com/@deagensie?_r=1&_t=ZS-9AWQfn1Vio3"
               class="transition-all duration-300 hover:scale-110 hover:text-[#05DED5]"
               aria-label="TikTok"
             >
