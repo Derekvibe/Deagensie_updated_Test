@@ -35,7 +35,25 @@ const sendUpdates = defineModel<boolean>('sendUpdates', { required: true });
       <Field :data-invalid="!!errors.agreeToTerms" orientation="horizontal">
         <Checkbox id="creative-terms" v-model="agreeToTerms" :disabled="disabled" />
         <FieldLabel for="creative-terms">
-          I agree to Deagensie's Terms of Service, Privacy Policy, and Cookie Policy.
+          I agree to Deagensie's
+          <NuxtLink
+            to="/terms"
+            target="_blank"
+            class="text-[#04308F] underline hover:text-[#05DED5]"
+            >Terms of Service</NuxtLink
+          >,
+          <NuxtLink
+            to="/privacy"
+            target="_blank"
+            class="text-[#04308F] underline hover:text-[#05DED5]"
+            >Privacy Policy</NuxtLink
+          >, and
+          <NuxtLink
+            to="/cookies"
+            target="_blank"
+            class="text-[#04308F] underline hover:text-[#05DED5]"
+            >Cookie Policy</NuxtLink
+          >.
         </FieldLabel>
       </Field>
       <FieldError v-if="errors.agreeToTerms">{{ errors.agreeToTerms }}</FieldError>

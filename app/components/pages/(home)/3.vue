@@ -179,6 +179,46 @@ import { Icon } from '@iconify/vue';
           </p>
         </article>
       </div>
+
+      <!-- <div class="grid grid-cols-1 gap-8 pt-4 md:grid-cols-2 md:justify-items-center lg:gap-10">
+        <article
+          class="group w-full rounded-3xl border border-gray-100 bg-white p-8 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-[#04308F]/40 hover:shadow-xl lg:p-10"
+        >
+          <div
+            class="mb-4 size-3 rounded-full bg-[#05DED5] transition-transform duration-300 group-hover:scale-150"
+          ></div>
+
+          <h3
+            class="mb-3 font-serif text-xl font-normal text-gray-900 group-hover:text-[#04308F] lg:text-2xl"
+          >
+            Venture's Growth Lab
+          </h3>
+
+          <p class="text-sm leading-relaxed font-normal text-gray-600 lg:text-base">
+            4 integrated layers (Strategy, Branding, Marketing, Digital Platforms) guiding ventures
+            from discovery to market dominance.
+          </p>
+        </article>
+
+        <article
+          class="group w-full rounded-3xl border border-gray-100 bg-white p-8 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-[#04308F]/40 hover:shadow-xl lg:p-10"
+        >
+          <div
+            class="mb-4 size-3 rounded-full bg-[#04308F] transition-transform duration-300 group-hover:scale-150"
+          ></div>
+
+          <h3
+            class="mb-3 font-serif text-xl font-normal text-gray-900 group-hover:text-[#04308F] lg:text-2xl"
+          >
+            Talent-as-a-Service (TaaS)
+          </h3>
+
+          <p class="text-sm leading-relaxed font-normal text-gray-600 lg:text-base">
+            Predictive AI matching talent signals with opportunity signals to connect top global
+            creative talent with high-impact ventures.
+          </p>
+        </article>
+      </div> -->
     </div>
   </section>
 </template>

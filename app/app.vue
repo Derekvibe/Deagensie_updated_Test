@@ -154,17 +154,17 @@ useHead({
           <div class="flex flex-col gap-3 text-sm">
             <h3 class="mb-2 text-base font-bold tracking-wider text-white uppercase">Legal</h3>
             <NuxtLink
-              to="/contact"
+              to="/privacy"
               class="text-gray-300 transition-colors duration-200 hover:text-[#05DED5]"
               >Privacy Policy</NuxtLink
             >
             <NuxtLink
-              to="/contact"
+              to="/terms"
               class="text-gray-300 transition-colors duration-200 hover:text-[#05DED5]"
               >Terms of Service</NuxtLink
             >
             <NuxtLink
-              to="/contact"
+              to="/cookies"
               class="text-gray-300 transition-colors duration-200 hover:text-[#05DED5]"
               >Cookie Policy</NuxtLink
             >
@@ -177,13 +177,13 @@ useHead({
       >
         <p>&copy; 2026 Deagensie. All rights reserved.</p>
         <div class="flex gap-6">
-          <NuxtLink to="/contact" class="transition-colors duration-200 hover:text-white"
+          <NuxtLink to="/privacy" class="transition-colors duration-200 hover:text-white"
             >Privacy Policy</NuxtLink
           >
-          <NuxtLink to="/contact" class="transition-colors duration-200 hover:text-white"
+          <NuxtLink to="/terms" class="transition-colors duration-200 hover:text-white"
             >Terms of Service</NuxtLink
           >
-          <NuxtLink to="/contact" class="transition-colors duration-200 hover:text-white"
+          <NuxtLink to="/cookies" class="transition-colors duration-200 hover:text-white"
             >Cookie Policy</NuxtLink
           >
         </div>

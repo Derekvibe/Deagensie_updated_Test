@@ -247,9 +247,19 @@ const isMobile = useMediaQuery('(max-width: 1023px)');
                   />
                   <FieldLabel for="checkout-terms">
                     I agree to the
-                    <NuxtLink to="/" class="text-[#04308F]">Terms of Service</NuxtLink>
+                    <NuxtLink
+                      to="/terms"
+                      target="_blank"
+                      class="text-[#04308F] underline hover:text-[#05DED5]"
+                      >Terms of Service</NuxtLink
+                    >
                     and
-                    <NuxtLink to="/" class="text-[#04308F]">Privacy Policy</NuxtLink>
+                    <NuxtLink
+                      to="/privacy"
+                      target="_blank"
+                      class="text-[#04308F] underline hover:text-[#05DED5]"
+                      >Privacy Policy</NuxtLink
+                    >
                   </FieldLabel>
                 </Field>
                 <FieldError v-if="errors.termsAccepted">{{ errors.termsAccepted }}</FieldError>
@@ -429,9 +439,19 @@ const isMobile = useMediaQuery('(max-width: 1023px)');
                       />
                       <FieldLabel for="checkout-terms">
                         I agree to the
-                        <NuxtLink to="/" class="text-[#04308F]">Terms of Service</NuxtLink>
+                        <NuxtLink
+                          to="/terms"
+                          target="_blank"
+                          class="text-[#04308F] underline hover:text-[#05DED5]"
+                          >Terms of Service</NuxtLink
+                        >
                         and
-                        <NuxtLink to="/" class="text-[#04308F]">Privacy Policy</NuxtLink>
+                        <NuxtLink
+                          to="/privacy"
+                          target="_blank"
+                          class="text-[#04308F] underline hover:text-[#05DED5]"
+                          >Privacy Policy</NuxtLink
+                        >
                       </FieldLabel>
                     </Field>
                     <FieldError v-if="errors.termsAccepted">{{ errors.termsAccepted }}</FieldError>

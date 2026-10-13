@@ -68,6 +68,36 @@ const staticPageSeo: Record<string, PageSeo> = {
     description:
       'Browse Deagensie subscription plans for flexible venture growth support and embedded creative talent.',
   },
+  '/privacy': {
+    title: 'Privacy Policy | Deagensie',
+    description:
+      'Understand how Deagensie collects, processes, and protects personal data across our Venture Growth Lab and Talent-as-a-Service ecosystem.',
+  },
+  '/privacy-policy': {
+    title: 'Privacy Policy | Deagensie',
+    description:
+      'Understand how Deagensie collects, processes, and protects personal data across our Venture Growth Lab and Talent-as-a-Service ecosystem.',
+  },
+  '/terms': {
+    title: 'Terms of Service | Deagensie',
+    description:
+      'Read the Terms of Service governing the use of the Deagensie platform, Venture Growth Lab services, and Talent-as-a-Service placements.',
+  },
+  '/terms-of-service': {
+    title: 'Terms of Service | Deagensie',
+    description:
+      'Read the Terms of Service governing the use of the Deagensie platform, Venture Growth Lab services, and Talent-as-a-Service placements.',
+  },
+  '/cookies': {
+    title: 'Cookie Policy | Deagensie',
+    description:
+      'Learn about how Deagensie uses cookies and tracking technologies to deliver a secure, optimized platform experience.',
+  },
+  '/cookie-policy': {
+    title: 'Cookie Policy | Deagensie',
+    description:
+      'Learn about how Deagensie uses cookies and tracking technologies to deliver a secure, optimized platform experience.',
+  },
 };
 
 function titleCase(value: string) {
