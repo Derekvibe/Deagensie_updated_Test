@@ -36,65 +36,76 @@ function scrollToArticle(id: string) {
 
 <template>
   <div class="min-h-screen bg-[#FAFAFC]">
-    <!-- Formal Legal Agreement Hero (Distinct from Privacy and Cookies) -->
-    <header class="border-b border-gray-200 bg-white pt-28 pb-14 lg:pt-36 lg:pb-20">
-      <div class="mx-auto w-5/6 max-w-6xl space-y-6">
-        <!-- Breadcrumbs -->
-        <div
-          class="flex items-center gap-2 text-xs font-semibold tracking-widest text-gray-400 uppercase"
-        >
-          <NuxtLink to="/" class="transition-colors hover:text-gray-900">Home</NuxtLink>
-          <span>/</span>
-          <span class="text-[#04308F]">Master Agreement</span>
-        </div>
-
-        <div class="max-w-3xl space-y-4">
-          <div
-            class="inline-flex items-center gap-2 rounded-full bg-[#04308F]/10 px-3.5 py-1 text-xs font-semibold tracking-wider text-[#04308F] uppercase"
+    <!-- Editorial Hero Section matching Home & About Page style -->
+    <section class="border-b border-gray-100 bg-white pt-28 pb-16 text-gray-900 lg:pt-36 lg:pb-24">
+      <div class="mx-auto w-5/6 max-w-7xl">
+        <div v-reveal="'fade-up'" class="mx-auto max-w-4xl space-y-6 text-center">
+          <span
+            class="inline-block rounded-full bg-[#04308F]/10 px-4 py-1.5 text-xs font-semibold tracking-widest text-[#04308F] uppercase"
           >
-            <Icon icon="solar:scale-bold" class="text-base" />
-            <span>Binding Legal Contract</span>
-          </div>
-
+            Legal Terms &amp; Conditions
+          </span>
           <h1
-            class="font-serif text-3xl font-normal tracking-tight text-gray-900 sm:text-4xl lg:text-5xl"
+            class="font-serif text-3xl leading-tight font-normal tracking-tight text-gray-900 sm:text-4xl lg:text-6xl"
           >
-            Deagensie Terms of Service
+            Master Platform Agreement <br />
+            <span class="text-[#04308F]">Terms of Service</span>
           </h1>
-
-          <p class="text-base leading-relaxed text-gray-600 sm:text-lg">
-            The master contractual agreement governing all venture engagements, Growth
-            Subscriptions, and Talent-as-a-Service partnerships between Deagensie Inc., Client
-            Ventures, and Creative Professionals.
+          <p
+            class="mx-auto max-w-3xl text-base leading-relaxed font-normal text-gray-500 sm:text-lg lg:text-xl"
+          >
+            The contractual agreement governing all venture engagements, Growth Subscriptions, and
+            Talent-as-a-Service partnerships between Deagensie Inc., Client Ventures, and Creative
+            Professionals.
           </p>
-        </div>
 
-        <!-- Contract Specification Strip -->
-        <div
-          class="flex flex-wrap items-center gap-4 border-t border-gray-100 pt-6 text-xs text-gray-500 sm:text-sm"
-        >
-          <div class="flex items-center gap-1.5">
-            <Icon icon="solar:document-text-bold" class="text-[#04308F]" />
-            <span>Contract Version: <strong>2026.2</strong></span>
-          </div>
-          <span>&bull;</span>
-          <div class="flex items-center gap-1.5">
-            <Icon icon="solar:calendar-linear" class="text-[#04308F]" />
-            <span>Effective Date: <strong>October 13, 2026</strong></span>
-          </div>
-          <span>&bull;</span>
-          <div class="flex items-center gap-1.5">
-            <Icon icon="solar:global-linear" class="text-[#04308F]" />
-            <span>Governing Law: <strong>State of Delaware, USA</strong></span>
-          </div>
-          <span>&bull;</span>
-          <div class="flex items-center gap-1.5">
-            <Icon icon="solar:shield-check-bold" class="text-emerald-600" />
-            <span>Dispute Forum: <strong>Binding AAA Arbitration</strong></span>
+          <div
+            class="flex flex-wrap items-center justify-center gap-4 pt-2 text-xs font-semibold text-gray-700 sm:gap-8 sm:text-sm lg:text-base"
+          >
+            <div class="flex items-center gap-2">
+              <Icon icon="lucide:check" class="text-lg font-bold text-[#05DED5]" />
+              <span>Deliverable IP Transfer</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <Icon icon="lucide:check" class="text-lg font-bold text-[#05DED5]" />
+              <span>Independent Contractor Terms</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <Icon icon="lucide:check" class="text-lg font-bold text-[#05DED5]" />
+              <span>Non-Circumvention Protection</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <Icon icon="lucide:check" class="text-lg font-bold text-[#05DED5]" />
+              <span>Delaware AAA Arbitration</span>
+            </div>
           </div>
         </div>
       </div>
-    </header>
+    </section>
+
+    <!-- Contract Specification Strip -->
+    <section class="border-b border-gray-100 bg-gray-50 py-6">
+      <div
+        class="mx-auto flex w-5/6 max-w-5xl flex-wrap items-center justify-center gap-6 text-xs text-gray-600 sm:justify-between sm:text-sm"
+      >
+        <div class="flex items-center gap-2">
+          <Icon icon="solar:document-text-bold" class="text-base text-[#04308F]" />
+          <span>Contract Version: <strong>2026.2</strong></span>
+        </div>
+        <div class="flex items-center gap-2">
+          <Icon icon="solar:calendar-linear" class="text-base text-[#04308F]" />
+          <span>Effective Date: <strong>October 13, 2026</strong></span>
+        </div>
+        <div class="flex items-center gap-2">
+          <Icon icon="solar:global-linear" class="text-base text-[#04308F]" />
+          <span>Governing Law: <strong>Delaware, USA</strong></span>
+        </div>
+        <div class="flex items-center gap-2">
+          <Icon icon="solar:shield-check-bold" class="text-base text-emerald-600" />
+          <span>Dispute Forum: <strong>Binding AAA Arbitration</strong></span>
+        </div>
+      </div>
+    </section>
 
     <!-- Key Terms Executive Summary for Founders & Creatives -->
     <section class="border-b border-gray-200 bg-gray-50/70 py-10">

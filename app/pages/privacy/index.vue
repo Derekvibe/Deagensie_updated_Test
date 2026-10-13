@@ -58,92 +58,77 @@ const requestMailto = computed(() => {
 
 <template>
   <div class="min-h-screen bg-[#FDFDFE]">
-    <!-- Bespoke Privacy Hero Banner (Distinct from Cookies) -->
-    <header
-      class="relative overflow-hidden border-b border-gray-100 bg-[#020B1E] pt-28 pb-16 text-white lg:pt-36 lg:pb-24"
-    >
-      <!-- Glow ambient backdrop -->
-      <div
-        class="pointer-events-none absolute -top-32 -right-32 h-96 w-96 rounded-full bg-[#05DED5]/15 blur-3xl"
-      />
-      <div
-        class="pointer-events-none absolute -bottom-32 -left-32 h-96 w-96 rounded-full bg-[#04308F]/40 blur-3xl"
-      />
-
-      <div class="relative mx-auto w-5/6 max-w-6xl space-y-8">
-        <!-- Breadcrumbs -->
-        <div
-          class="flex items-center gap-2 text-xs font-semibold tracking-widest text-gray-400 uppercase"
-        >
-          <NuxtLink to="/" class="transition-colors hover:text-white">Home</NuxtLink>
-          <span>/</span>
-          <span class="text-[#05DED5]">Privacy & Data Governance</span>
-        </div>
-
-        <div class="max-w-3xl space-y-4">
-          <div
-            class="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-1.5 text-xs font-semibold tracking-wider text-[#05DED5] uppercase backdrop-blur-md"
+    <!-- Editorial Hero Section matching Home & About Page style -->
+    <section class="border-b border-gray-100 bg-white pt-28 pb-16 text-gray-900 lg:pt-36 lg:pb-24">
+      <div class="mx-auto w-5/6 max-w-7xl">
+        <div v-reveal="'fade-up'" class="mx-auto max-w-4xl space-y-6 text-center">
+          <span
+            class="inline-block rounded-full bg-[#04308F]/10 px-4 py-1.5 text-xs font-semibold tracking-widest text-[#04308F] uppercase"
           >
-            <Icon icon="solar:shield-check-bold" class="text-base" />
-            <span>Dedicated Privacy Portal</span>
-          </div>
-
+            Trust &amp; Governance
+          </span>
           <h1
-            class="font-serif text-3xl font-normal tracking-tight text-white sm:text-4xl lg:text-5xl lg:leading-tight"
+            class="font-serif text-3xl leading-tight font-normal tracking-tight text-gray-900 sm:text-4xl lg:text-6xl"
           >
-            We Protect Your Data, IP, and Creative Legacy
+            Your Data Protected. <br />
+            <span class="text-[#04308F]">Your Trust Earned.</span>
           </h1>
-
-          <p class="text-base leading-relaxed text-gray-300 sm:text-lg">
-            A comprehensive, transparent breakdown of how Deagensie collects, handles, and shields
-            personal data across our Venture Growth Lab and Talent-as-a-Service ecosystem.
+          <p
+            class="mx-auto max-w-3xl text-base leading-relaxed font-normal text-gray-500 sm:text-lg lg:text-xl"
+          >
+            A transparent breakdown of how Deagensie collects, safeguards, and ethically processes
+            personal information across our Venture Growth Lab and Talent-as-a-Service ecosystem.
           </p>
 
-          <div class="flex flex-wrap items-center gap-4 pt-2 text-xs text-gray-400">
-            <span>Last Updated: <strong>October 13, 2026</strong></span>
-            <span>&bull;</span>
-            <span>Version: <strong>2.4 (Global Edition)</strong></span>
-            <span>&bull;</span>
-            <span>Jurisdiction: <strong>GDPR / CCPA / Delaware</strong></span>
-          </div>
-        </div>
-
-        <!-- 4 Core Trust Pillars -->
-        <div class="grid grid-cols-2 gap-3 pt-6 sm:grid-cols-4 sm:gap-4">
-          <div class="rounded-2xl border border-white/10 bg-white/5 p-4 backdrop-blur-xs">
-            <Icon icon="solar:hand-money-linear" class="text-2xl text-[#05DED5]" />
-            <h4 class="mt-2 text-sm font-bold text-white">Zero Data Selling</h4>
-            <p class="mt-1 text-xs text-gray-400">
-              We never sell, rent, or broker your personal information.
-            </p>
-          </div>
-
-          <div class="rounded-2xl border border-white/10 bg-white/5 p-4 backdrop-blur-xs">
-            <Icon icon="solar:cpu-bolt-linear" class="text-2xl text-[#05DED5]" />
-            <h4 class="mt-2 text-sm font-bold text-white">Merit-Based AI</h4>
-            <p class="mt-1 text-xs text-gray-400">
-              Matching evaluated on skills and output, zero demographic bias.
-            </p>
-          </div>
-
-          <div class="rounded-2xl border border-white/10 bg-white/5 p-4 backdrop-blur-xs">
-            <Icon icon="solar:global-linear" class="text-2xl text-[#05DED5]" />
-            <h4 class="mt-2 text-sm font-bold text-white">Global Compliance</h4>
-            <p class="mt-1 text-xs text-gray-400">
-              Full statutory GDPR, UK GDPR, and CCPA/CPRA rights.
-            </p>
-          </div>
-
-          <div class="rounded-2xl border border-white/10 bg-white/5 p-4 backdrop-blur-xs">
-            <Icon icon="solar:lock-keyhole-linear" class="text-2xl text-[#05DED5]" />
-            <h4 class="mt-2 text-sm font-bold text-white">Bank-Grade Encryption</h4>
-            <p class="mt-1 text-xs text-gray-400">
-              TLS 1.3 in transit and AES-256 encryption at rest.
-            </p>
+          <!-- Key trust checkmark list matching homepage hero (0.vue) -->
+          <div
+            class="flex flex-wrap items-center justify-center gap-4 pt-2 text-xs font-semibold text-gray-700 sm:gap-8 sm:text-sm lg:text-base"
+          >
+            <div class="flex items-center gap-2">
+              <Icon icon="lucide:check" class="text-lg font-bold text-[#05DED5]" />
+              <span>Zero Data Selling</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <Icon icon="lucide:check" class="text-lg font-bold text-[#05DED5]" />
+              <span>Merit-Based AI Matching</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <Icon icon="lucide:check" class="text-lg font-bold text-[#05DED5]" />
+              <span>GDPR &amp; CCPA Compliant</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <Icon icon="lucide:check" class="text-lg font-bold text-[#05DED5]" />
+              <span>AES-256 Bit Encryption</span>
+            </div>
           </div>
         </div>
       </div>
-    </header>
+    </section>
+
+    <!-- Metadata & Trust Bar -->
+    <section class="border-b border-gray-100 bg-gray-50 py-6">
+      <div
+        class="mx-auto flex w-5/6 max-w-5xl flex-wrap items-center justify-center gap-6 text-xs text-gray-600 sm:justify-between sm:text-sm"
+      >
+        <div class="flex items-center gap-2">
+          <Icon icon="solar:calendar-linear" class="text-base text-[#04308F]" />
+          <span>Last Updated: <strong>October 13, 2026</strong></span>
+        </div>
+        <div class="flex items-center gap-2">
+          <Icon icon="solar:shield-check-bold" class="text-base text-emerald-600" />
+          <span>Version 2.4 &bull; Global Framework</span>
+        </div>
+        <div class="flex items-center gap-2">
+          <Icon icon="solar:letter-bold" class="text-base text-[#04308F]" />
+          <span
+            >DPO:
+            <a href="mailto:privacy@deagensie.com" class="font-medium text-[#04308F] underline"
+              >privacy@deagensie.com</a
+            ></span
+          >
+        </div>
+      </div>
+    </section>
 
     <!-- Quick Topic Navigation Pill Bar -->
     <div class="sticky top-20 z-30 border-b border-gray-200 bg-white/90 backdrop-blur-md">
