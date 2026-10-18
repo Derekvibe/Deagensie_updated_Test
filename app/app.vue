@@ -80,20 +80,28 @@ useHead({
           <div class="flex flex-col gap-3 text-sm">
             <h3 class="mb-2 text-base font-bold tracking-wider text-white uppercase">Growth Lab</h3>
             <NuxtLink
-              to="/business"
+              to="/business/growth-lab"
               class="text-gray-300 transition-colors duration-200 hover:text-[#05DED5]"
               >Overview</NuxtLink
             >
-            <NuxtLink class="text-gray-300 transition-colors duration-200 hover:text-[#05DED5]"
+            <NuxtLink
+              to="/business/growth-lab"
+              class="text-gray-300 transition-colors duration-200 hover:text-[#05DED5]"
               >Strategy</NuxtLink
             >
-            <NuxtLink class="text-gray-300 transition-colors duration-200 hover:text-[#05DED5]"
+            <NuxtLink
+              to="/business/growth-lab"
+              class="text-gray-300 transition-colors duration-200 hover:text-[#05DED5]"
               >Branding</NuxtLink
             >
-            <NuxtLink class="text-gray-300 transition-colors duration-200 hover:text-[#05DED5]"
+            <NuxtLink
+              to="/business/growth-lab"
+              class="text-gray-300 transition-colors duration-200 hover:text-[#05DED5]"
               >Marketing</NuxtLink
             >
-            <NuxtLink class="text-gray-300 transition-colors duration-200 hover:text-[#05DED5]"
+            <NuxtLink
+              to="/business/growth-lab"
+              class="text-gray-300 transition-colors duration-200 hover:text-[#05DED5]"
               >Digital Platforms</NuxtLink
             >
           </div>
@@ -101,17 +109,23 @@ useHead({
           <div class="flex flex-col gap-3 text-sm">
             <h3 class="mb-2 text-base font-bold tracking-wider text-white uppercase">TaaS</h3>
             <NuxtLink
-              to="/creatives"
+              to="/business/taas"
               class="text-gray-300 transition-colors duration-200 hover:text-[#05DED5]"
               >Find Talent</NuxtLink
             >
-            <NuxtLink class="text-gray-300 transition-colors duration-200 hover:text-[#05DED5]"
-              >Find Opportunities</NuxtLink
+            <NuxtLink
+              to="/business/taas"
+              class="text-gray-300 transition-colors duration-200 hover:text-[#05DED5]"
+              >How It Works</NuxtLink
             >
-            <NuxtLink class="text-gray-300 transition-colors duration-200 hover:text-[#05DED5]"
+            <NuxtLink
+              to="/business/taas"
+              class="text-gray-300 transition-colors duration-200 hover:text-[#05DED5]"
               >AI Matching Engine</NuxtLink
             >
-            <NuxtLink class="text-gray-300 transition-colors duration-200 hover:text-[#05DED5]"
+            <NuxtLink
+              to="/creatives"
+              class="text-gray-300 transition-colors duration-200 hover:text-[#05DED5]"
               >Creative Careers</NuxtLink
             >
           </div>

@@ -38,7 +38,9 @@ const open = defineModel<boolean>('open', { default: false });
             <AccordionContent class="space-y-4 px-3 pt-7 pb-5">
               <div class="space-y-4">
                 <p class="font-medium">
-                  <NuxtLink to="/business" class="hover:underline"> Venture's Growth Lab </NuxtLink>
+                  <NuxtLink to="/business/growth-lab" class="hover:underline">
+                    Venture's Growth Lab
+                  </NuxtLink>
                 </p>
                 <p class="text-sm leading-relaxed">
                   Where Ventures Become Growth-Ready. Strategy, Branding, Marketing, Digital
@@ -54,21 +56,25 @@ const open = defineModel<boolean>('open', { default: false });
                   class="space-y-3 **:[a]:inline-flex **:[a]:items-center **:[a]:gap-2 **:[a]:text-xs **:[a]:leading-normal **:[svg]:text-base"
                 >
                   <li>
-                    <NuxtLink to="/business" class="hover:underline">
+                    <NuxtLink
+                      to="/business/growth-lab"
+                      class="hover:underline"
+                      @click="open = false"
+                    >
                       <Icon icon="hugeicons:arrow-right-01" />
-                      Brand Positioning & Strategy
+                      Venture&apos;s Growth Lab
                     </NuxtLink>
                   </li>
                   <li>
-                    <NuxtLink to="/portfolio" class="hover:underline">
+                    <NuxtLink to="/business/taas" class="hover:underline" @click="open = false">
+                      <Icon icon="hugeicons:arrow-right-01" />
+                      TaaS for Ventures
+                    </NuxtLink>
+                  </li>
+                  <li>
+                    <NuxtLink to="/portfolio" class="hover:underline" @click="open = false">
                       <Icon icon="hugeicons:arrow-right-01" />
                       Client Case Studies
-                    </NuxtLink>
-                  </li>
-                  <li>
-                    <NuxtLink to="/subscription" class="hover:underline">
-                      <Icon icon="hugeicons:arrow-right-01" />
-                      Talent-as-a-Service
                     </NuxtLink>
                   </li>
                   <li>

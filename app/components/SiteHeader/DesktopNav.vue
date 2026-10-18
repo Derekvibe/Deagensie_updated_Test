@@ -129,78 +129,64 @@ onUnmounted(cancelClose);
 
   <div
     v-if="activeDesktopMenu"
-    class="text-popover-foreground animate-in fade-in-0 zoom-in-95 bg-popover fixed top-[calc((var(--spacing)*20)+(var(--spacing)*1))] left-1/2 z-50 -translate-x-1/2 rounded-[calc(var(--radius)+2px)] shadow-md outline-none"
+    class="text-popover-foreground animate-in fade-in-0 zoom-in-95 fixed top-[calc((var(--spacing)*20)+(var(--spacing)*1))] left-1/2 z-50 -translate-x-1/2 rounded-3xl border border-gray-200/80 bg-white shadow-2xl outline-none"
     @mouseenter="cancelClose"
     @mouseleave="scheduleDesktopMenuClose"
   >
     <div
       v-if="activeDesktopMenu === 'business'"
-      class="flex aspect-880/420 w-[calc(880/1440*100vw)] max-w-[880px] gap-8 rounded-[inherit] p-8"
+      class="flex w-[860px] max-w-[calc(100vw-3rem)] gap-6 rounded-[inherit] p-6 lg:gap-8 lg:p-7"
     >
-      <div class="flex flex-1 flex-col justify-between space-y-4">
-        <div class="space-y-3">
+      <div class="flex flex-1 flex-col justify-between">
+        <div class="space-y-2">
           <NuxtLink
-            to="/business"
-            class="group flex items-start gap-4 rounded-2xl p-3 transition-colors hover:bg-gray-100/70"
+            to="/business/growth-lab"
+            class="group flex items-start gap-3.5 rounded-2xl p-2.5 transition-colors hover:bg-gray-100/70"
+            @click="closeDesktopMenu"
           >
             <div
-              class="flex size-11 shrink-0 items-center justify-center rounded-xl border border-gray-200/80 bg-gray-50 text-xl text-[#026662] transition-colors group-hover:bg-[#026662] group-hover:text-white"
+              class="flex size-10 shrink-0 items-center justify-center rounded-xl border border-gray-200/80 bg-gray-50 text-xl text-[#026662] transition-colors group-hover:bg-[#026662] group-hover:text-white"
             >
               <Icon icon="hugeicons:target-02" />
             </div>
             <div>
-              <p class="text-base font-semibold text-gray-950 group-hover:text-[#026662]">
-                Brand Positioning & Strategy
+              <p class="text-sm font-semibold text-gray-950 group-hover:text-[#026662]">
+                Venture's Growth Lab
               </p>
               <p class="mt-0.5 text-xs leading-relaxed text-gray-500">
-                Build investor-grade positioning, narrative & market identity for your venture.
+                Strategy, branding, marketing, and digital platforms to turn ventures into scalable,
+                market-ready businesses.
               </p>
             </div>
           </NuxtLink>
 
           <NuxtLink
-            to="/business"
-            class="group flex items-start gap-4 rounded-2xl p-3 transition-colors hover:bg-gray-100/70"
+            to="/business/taas"
+            class="group flex items-start gap-3.5 rounded-2xl p-2.5 transition-colors hover:bg-gray-100/70"
+            @click="closeDesktopMenu"
           >
             <div
-              class="flex size-11 shrink-0 items-center justify-center rounded-xl border border-gray-200/80 bg-gray-50 text-xl text-[#026662] transition-colors group-hover:bg-[#026662] group-hover:text-white"
-            >
-              <Icon icon="hugeicons:cpu" />
-            </div>
-            <div>
-              <p class="text-base font-semibold text-gray-950 group-hover:text-[#026662]">
-                Growth Engineering & AI
-              </p>
-              <p class="mt-0.5 text-xs leading-relaxed text-gray-500">
-                Predictive marketing intelligence, scalable acquisition systems & growth roadmaps.
-              </p>
-            </div>
-          </NuxtLink>
-
-          <NuxtLink
-            to="/subscription"
-            class="group flex items-start gap-4 rounded-2xl p-3 transition-colors hover:bg-gray-100/70"
-          >
-            <div
-              class="flex size-11 shrink-0 items-center justify-center rounded-xl border border-gray-200/80 bg-gray-50 text-xl text-[#026662] transition-colors group-hover:bg-[#026662] group-hover:text-white"
+              class="flex size-10 shrink-0 items-center justify-center rounded-xl border border-gray-200/80 bg-gray-50 text-xl text-[#026662] transition-colors group-hover:bg-[#026662] group-hover:text-white"
             >
               <Icon icon="hugeicons:user-group" />
             </div>
             <div>
-              <p class="text-base font-semibold text-gray-950 group-hover:text-[#026662]">
-                On-Demand Creative Squads
+              <p class="text-sm font-semibold text-gray-950 group-hover:text-[#026662]">
+                TaaS for Ventures
               </p>
               <p class="mt-0.5 text-xs leading-relaxed text-gray-500">
-                Deploy dedicated African creative teams & growth experts on flexible plans.
+                On-demand creative squads and growth specialists embedded directly into your
+                venture.
               </p>
             </div>
           </NuxtLink>
         </div>
 
-        <div class="pt-1">
+        <div class="mt-4 border-t border-gray-100 pt-3">
           <NuxtLink
             to="/business"
-            class="inline-flex items-center gap-2 text-sm font-semibold text-[#026662] hover:underline"
+            class="inline-flex items-center gap-2 text-xs font-semibold text-[#026662] hover:underline sm:text-sm"
+            @click="closeDesktopMenu"
           >
             Explore all venture solutions
             <Icon icon="hugeicons:arrow-right-02" class="text-base" />
@@ -209,22 +195,25 @@ onUnmounted(cancelClose);
       </div>
 
       <div
-        class="relative flex w-[320px] shrink-0 flex-col justify-between overflow-hidden rounded-3xl border border-[#05DED5]/30 bg-[#E6FEFD] p-7 text-gray-950"
+        class="relative flex w-[290px] shrink-0 flex-col justify-between overflow-hidden rounded-2xl border border-[#05DED5]/30 bg-[#E6FEFD] p-5 text-gray-950 lg:w-[310px] lg:p-6"
       >
-        <div class="space-y-3">
-          <p class="text-xl leading-tight font-bold">Build a Scalable Brand</p>
+        <div class="space-y-2">
+          <p class="text-lg leading-tight font-bold lg:text-xl">Build a Scalable Brand</p>
           <NuxtLink
             to="https://app-deagensie-waitlist.vercel.app/"
-            class="inline-flex items-center gap-1.5 text-sm font-semibold text-[#04308F] hover:underline"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center gap-1.5 text-xs font-semibold text-[#04308F] hover:underline lg:text-sm"
+            @click="closeDesktopMenu"
           >
             Enter Deagensie Waitlist
             <Icon icon="hugeicons:arrow-right-02" class="text-base" />
           </NuxtLink>
         </div>
-        <div class="mt-4 overflow-hidden rounded-2xl border border-gray-200/80 bg-white p-2">
+        <div class="mt-3 overflow-hidden rounded-xl border border-gray-200/80 bg-white p-1.5">
           <NuxtImg
             src="/images/pages/(home)/hero.webp"
-            class="aspect-16/10 w-full rounded-xl object-cover"
+            class="aspect-16/10 w-full rounded-lg object-cover"
           />
         </div>
       </div>
@@ -232,21 +221,22 @@ onUnmounted(cancelClose);
 
     <div
       v-else-if="activeDesktopMenu === 'creatives'"
-      class="flex aspect-880/420 w-[calc(880/1440*100vw)] max-w-[880px] gap-8 rounded-[inherit] p-8"
+      class="flex w-[860px] max-w-[calc(100vw-3rem)] gap-6 rounded-[inherit] p-6 lg:gap-8 lg:p-7"
     >
-      <div class="flex flex-1 flex-col justify-between space-y-4">
-        <div class="space-y-3">
+      <div class="flex flex-1 flex-col justify-between">
+        <div class="space-y-2">
           <NuxtLink
             to="/creatives"
-            class="group flex items-start gap-4 rounded-2xl p-3 transition-colors hover:bg-gray-100/70"
+            class="group flex items-start gap-3.5 rounded-2xl p-2.5 transition-colors hover:bg-gray-100/70"
+            @click="closeDesktopMenu"
           >
             <div
-              class="flex size-11 shrink-0 items-center justify-center rounded-xl border border-gray-200/80 bg-gray-50 text-xl text-[#026662] transition-colors group-hover:bg-[#026662] group-hover:text-white"
+              class="flex size-10 shrink-0 items-center justify-center rounded-xl border border-gray-200/80 bg-gray-50 text-xl text-[#026662] transition-colors group-hover:bg-[#026662] group-hover:text-white"
             >
               <Icon icon="hugeicons:user-ai" />
             </div>
             <div>
-              <p class="text-base font-semibold text-gray-950 group-hover:text-[#026662]">
+              <p class="text-sm font-semibold text-gray-950 group-hover:text-[#026662]">
                 Talent-as-a-Service (TaaS)
               </p>
               <p class="mt-0.5 text-xs leading-relaxed text-gray-500">
@@ -257,48 +247,52 @@ onUnmounted(cancelClose);
 
           <NuxtLink
             to="/creatives"
-            class="group flex items-start gap-4 rounded-2xl p-3 transition-colors hover:bg-gray-100/70"
+            class="group flex items-start gap-3.5 rounded-2xl p-2.5 transition-colors hover:bg-gray-100/70"
+            @click="closeDesktopMenu"
           >
             <div
-              class="flex size-11 shrink-0 items-center justify-center rounded-xl border border-gray-200/80 bg-gray-50 text-xl text-[#026662] transition-colors group-hover:bg-[#026662] group-hover:text-white"
+              class="flex size-10 shrink-0 items-center justify-center rounded-xl border border-gray-200/80 bg-gray-50 text-xl text-[#026662] transition-colors group-hover:bg-[#026662] group-hover:text-white"
             >
               <Icon icon="hugeicons:paint-brush-01" />
             </div>
             <div>
-              <p class="text-base font-semibold text-gray-950 group-hover:text-[#026662]">
+              <p class="text-sm font-semibold text-gray-950 group-hover:text-[#026662]">
                 For Creatives & Designers
               </p>
               <p class="mt-0.5 text-xs leading-relaxed text-gray-500">
-                Build your talent profile, earn competitive global income & remain rooted in Africa.
+                Build your talent profile, earn competitive global income and remain rooted in
+                Africa.
               </p>
             </div>
           </NuxtLink>
 
           <NuxtLink
             to="/register"
-            class="group flex items-start gap-4 rounded-2xl p-3 transition-colors hover:bg-gray-100/70"
+            class="group flex items-start gap-3.5 rounded-2xl p-2.5 transition-colors hover:bg-gray-100/70"
+            @click="closeDesktopMenu"
           >
             <div
-              class="flex size-11 shrink-0 items-center justify-center rounded-xl border border-gray-200/80 bg-gray-50 text-xl text-[#026662] transition-colors group-hover:bg-[#026662] group-hover:text-white"
+              class="flex size-10 shrink-0 items-center justify-center rounded-xl border border-gray-200/80 bg-gray-50 text-xl text-[#026662] transition-colors group-hover:bg-[#026662] group-hover:text-white"
             >
               <Icon icon="hugeicons:user-group-02" />
             </div>
             <div>
-              <p class="text-base font-semibold text-gray-950 group-hover:text-[#026662]">
+              <p class="text-sm font-semibold text-gray-950 group-hover:text-[#026662]">
                 Join Creative Community
               </p>
               <p class="mt-0.5 text-xs leading-relaxed text-gray-500">
-                Network of emerging young leaders, innovators & top creative minds across the
+                Network of emerging young leaders, innovators and top creative minds across the
                 continent.
               </p>
             </div>
           </NuxtLink>
         </div>
 
-        <div class="pt-1">
+        <div class="mt-4 border-t border-gray-100 pt-3">
           <NuxtLink
             to="/creatives"
-            class="inline-flex items-center gap-2 text-sm font-semibold text-[#026662] hover:underline"
+            class="inline-flex items-center gap-2 text-xs font-semibold text-[#026662] hover:underline sm:text-sm"
+            @click="closeDesktopMenu"
           >
             Learn about our creative talent
             <Icon icon="hugeicons:arrow-right-02" class="text-base" />
@@ -307,22 +301,23 @@ onUnmounted(cancelClose);
       </div>
 
       <div
-        class="relative flex w-[320px] shrink-0 flex-col justify-between overflow-hidden rounded-3xl border border-[#05DED5]/30 bg-[#E6FEFD] p-7 text-gray-950"
+        class="relative flex w-[290px] shrink-0 flex-col justify-between overflow-hidden rounded-2xl border border-[#05DED5]/30 bg-[#E6FEFD] p-5 text-gray-950 lg:w-[310px] lg:p-6"
       >
-        <div class="space-y-3">
-          <p class="text-xl leading-tight font-bold">Hire Top 1% African Creatives</p>
+        <div class="space-y-2">
+          <p class="text-lg leading-tight font-bold lg:text-xl">Hire Top 1% African Creatives</p>
           <NuxtLink
             to="/subscription"
-            class="inline-flex items-center gap-1.5 text-sm font-semibold text-[#04308F] hover:underline"
+            class="inline-flex items-center gap-1.5 text-xs font-semibold text-[#04308F] hover:underline lg:text-sm"
+            @click="closeDesktopMenu"
           >
             Explore Talent Subscriptions
             <Icon icon="hugeicons:arrow-right-02" class="text-base" />
           </NuxtLink>
         </div>
-        <div class="mt-4 overflow-hidden rounded-2xl border border-gray-200/80 bg-white p-2">
+        <div class="mt-3 overflow-hidden rounded-xl border border-gray-200/80 bg-white p-1.5">
           <NuxtImg
             src="/images/pages/why/hero-4.png"
-            class="aspect-16/10 w-full rounded-xl object-cover"
+            class="aspect-16/10 w-full rounded-lg object-cover"
           />
         </div>
       </div>
@@ -330,21 +325,22 @@ onUnmounted(cancelClose);
 
     <div
       v-else-if="activeDesktopMenu === 'why'"
-      class="flex aspect-880/420 w-[calc(880/1440*100vw)] max-w-[880px] gap-8 rounded-[inherit] p-8"
+      class="flex w-[860px] max-w-[calc(100vw-3rem)] gap-6 rounded-[inherit] p-6 lg:gap-8 lg:p-7"
     >
-      <div class="flex flex-1 flex-col justify-between space-y-4">
-        <div class="space-y-3">
+      <div class="flex flex-1 flex-col justify-between">
+        <div class="space-y-2">
           <NuxtLink
             to="/why"
-            class="group flex items-start gap-4 rounded-2xl p-3 transition-colors hover:bg-gray-100/70"
+            class="group flex items-start gap-3.5 rounded-2xl p-2.5 transition-colors hover:bg-gray-100/70"
+            @click="closeDesktopMenu"
           >
             <div
-              class="flex size-11 shrink-0 items-center justify-center rounded-xl border border-gray-200/80 bg-gray-50 text-xl text-[#026662] transition-colors group-hover:bg-[#026662] group-hover:text-white"
+              class="flex size-10 shrink-0 items-center justify-center rounded-xl border border-gray-200/80 bg-gray-50 text-xl text-[#026662] transition-colors group-hover:bg-[#026662] group-hover:text-white"
             >
               <Icon icon="hugeicons:zap" />
             </div>
             <div>
-              <p class="text-base font-semibold text-gray-950 group-hover:text-[#026662]">
+              <p class="text-sm font-semibold text-gray-950 group-hover:text-[#026662]">
                 The Deagensie Difference
               </p>
               <p class="mt-0.5 text-xs leading-relaxed text-gray-500">
@@ -355,15 +351,16 @@ onUnmounted(cancelClose);
 
           <NuxtLink
             to="/why"
-            class="group flex items-start gap-4 rounded-2xl p-3 transition-colors hover:bg-gray-100/70"
+            class="group flex items-start gap-3.5 rounded-2xl p-2.5 transition-colors hover:bg-gray-100/70"
+            @click="closeDesktopMenu"
           >
             <div
-              class="flex size-11 shrink-0 items-center justify-center rounded-xl border border-gray-200/80 bg-gray-50 text-xl text-[#026662] transition-colors group-hover:bg-[#026662] group-hover:text-white"
+              class="flex size-10 shrink-0 items-center justify-center rounded-xl border border-gray-200/80 bg-gray-50 text-xl text-[#026662] transition-colors group-hover:bg-[#026662] group-hover:text-white"
             >
               <Icon icon="hugeicons:rocket" />
             </div>
             <div>
-              <p class="text-base font-semibold text-gray-950 group-hover:text-[#026662]">
+              <p class="text-sm font-semibold text-gray-950 group-hover:text-[#026662]">
                 Founders' Growth Lab
               </p>
               <p class="mt-0.5 text-xs leading-relaxed text-gray-500">
@@ -374,15 +371,16 @@ onUnmounted(cancelClose);
 
           <NuxtLink
             to="/why"
-            class="group flex items-start gap-4 rounded-2xl p-3 transition-colors hover:bg-gray-100/70"
+            class="group flex items-start gap-3.5 rounded-2xl p-2.5 transition-colors hover:bg-gray-100/70"
+            @click="closeDesktopMenu"
           >
             <div
-              class="flex size-11 shrink-0 items-center justify-center rounded-xl border border-gray-200/80 bg-gray-50 text-xl text-[#026662] transition-colors group-hover:bg-[#026662] group-hover:text-white"
+              class="flex size-10 shrink-0 items-center justify-center rounded-xl border border-gray-200/80 bg-gray-50 text-xl text-[#026662] transition-colors group-hover:bg-[#026662] group-hover:text-white"
             >
               <Icon icon="hugeicons:globe-02" />
             </div>
             <div>
-              <p class="text-base font-semibold text-gray-950 group-hover:text-[#026662]">
+              <p class="text-sm font-semibold text-gray-950 group-hover:text-[#026662]">
                 African Excellence, Global Scale
               </p>
               <p class="mt-0.5 text-xs leading-relaxed text-gray-500">
@@ -392,10 +390,11 @@ onUnmounted(cancelClose);
           </NuxtLink>
         </div>
 
-        <div class="pt-1">
+        <div class="mt-4 border-t border-gray-100 pt-3">
           <NuxtLink
             to="/why"
-            class="inline-flex items-center gap-2 text-sm font-semibold text-[#026662] hover:underline"
+            class="inline-flex items-center gap-2 text-xs font-semibold text-[#026662] hover:underline sm:text-sm"
+            @click="closeDesktopMenu"
           >
             Discover the Deagensie Ecosystem
             <Icon icon="hugeicons:arrow-right-02" class="text-base" />
@@ -404,22 +403,23 @@ onUnmounted(cancelClose);
       </div>
 
       <div
-        class="relative flex w-[320px] shrink-0 flex-col justify-between overflow-hidden rounded-3xl border border-[#05DED5]/30 bg-[#E6FEFD] p-7 text-gray-950"
+        class="relative flex w-[290px] shrink-0 flex-col justify-between overflow-hidden rounded-2xl border border-[#05DED5]/30 bg-[#E6FEFD] p-5 text-gray-950 lg:w-[310px] lg:p-6"
       >
-        <div class="space-y-3">
-          <p class="text-xl leading-tight font-bold">See Our Brand Transformations</p>
+        <div class="space-y-2">
+          <p class="text-lg leading-tight font-bold lg:text-xl">See Our Brand Transformations</p>
           <NuxtLink
             to="/portfolio"
-            class="inline-flex items-center gap-1.5 text-sm font-semibold text-[#04308F] hover:underline"
+            class="inline-flex items-center gap-1.5 text-xs font-semibold text-[#04308F] hover:underline lg:text-sm"
+            @click="closeDesktopMenu"
           >
             View Selected Work
             <Icon icon="hugeicons:arrow-right-02" class="text-base" />
           </NuxtLink>
         </div>
-        <div class="mt-4 overflow-hidden rounded-2xl border border-gray-200/80 bg-white p-2">
+        <div class="mt-3 overflow-hidden rounded-xl border border-gray-200/80 bg-white p-1.5">
           <NuxtImg
             src="/images/pages/why/hero-2.png"
-            class="aspect-16/10 w-full rounded-xl object-cover"
+            class="aspect-16/10 w-full rounded-lg object-cover"
           />
         </div>
       </div>
@@ -427,21 +427,22 @@ onUnmounted(cancelClose);
 
     <div
       v-else-if="activeDesktopMenu === 'about'"
-      class="flex aspect-880/420 w-[calc(880/1440*100vw)] max-w-[880px] gap-8 rounded-[inherit] p-8"
+      class="flex w-[860px] max-w-[calc(100vw-3rem)] gap-6 rounded-[inherit] p-6 lg:gap-8 lg:p-7"
     >
-      <div class="flex flex-1 flex-col justify-between space-y-4">
-        <div class="space-y-3">
+      <div class="flex flex-1 flex-col justify-between">
+        <div class="space-y-2">
           <NuxtLink
             to="/about"
-            class="group flex items-start gap-4 rounded-2xl p-3 transition-colors hover:bg-gray-100/70"
+            class="group flex items-start gap-3.5 rounded-2xl p-2.5 transition-colors hover:bg-gray-100/70"
+            @click="closeDesktopMenu"
           >
             <div
-              class="flex size-11 shrink-0 items-center justify-center rounded-xl border border-gray-200/80 bg-gray-50 text-xl text-[#026662] transition-colors group-hover:bg-[#026662] group-hover:text-white"
+              class="flex size-10 shrink-0 items-center justify-center rounded-xl border border-gray-200/80 bg-gray-50 text-xl text-[#026662] transition-colors group-hover:bg-[#026662] group-hover:text-white"
             >
               <Icon icon="hugeicons:user-id-verification" />
             </div>
             <div>
-              <p class="text-base font-semibold text-gray-950 group-hover:text-[#026662]">
+              <p class="text-sm font-semibold text-gray-950 group-hover:text-[#026662]">
                 Who We Are
               </p>
               <p class="mt-0.5 text-xs leading-relaxed text-gray-500">
@@ -453,15 +454,16 @@ onUnmounted(cancelClose);
 
           <NuxtLink
             to="/portfolio"
-            class="group flex items-start gap-4 rounded-2xl p-3 transition-colors hover:bg-gray-100/70"
+            class="group flex items-start gap-3.5 rounded-2xl p-2.5 transition-colors hover:bg-gray-100/70"
+            @click="closeDesktopMenu"
           >
             <div
-              class="flex size-11 shrink-0 items-center justify-center rounded-xl border border-gray-200/80 bg-gray-50 text-xl text-[#026662] transition-colors group-hover:bg-[#026662] group-hover:text-white"
+              class="flex size-10 shrink-0 items-center justify-center rounded-xl border border-gray-200/80 bg-gray-50 text-xl text-[#026662] transition-colors group-hover:bg-[#026662] group-hover:text-white"
             >
               <Icon icon="hugeicons:briefcase-02" />
             </div>
             <div>
-              <p class="text-base font-semibold text-gray-950 group-hover:text-[#026662]">
+              <p class="text-sm font-semibold text-gray-950 group-hover:text-[#026662]">
                 Our Portfolio
               </p>
               <p class="mt-0.5 text-xs leading-relaxed text-gray-500">
@@ -472,15 +474,16 @@ onUnmounted(cancelClose);
 
           <NuxtLink
             to="/contact"
-            class="group flex items-start gap-4 rounded-2xl p-3 transition-colors hover:bg-gray-100/70"
+            class="group flex items-start gap-3.5 rounded-2xl p-2.5 transition-colors hover:bg-gray-100/70"
+            @click="closeDesktopMenu"
           >
             <div
-              class="flex size-11 shrink-0 items-center justify-center rounded-xl border border-gray-200/80 bg-gray-50 text-xl text-[#026662] transition-colors group-hover:bg-[#026662] group-hover:text-white"
+              class="flex size-10 shrink-0 items-center justify-center rounded-xl border border-gray-200/80 bg-gray-50 text-xl text-[#026662] transition-colors group-hover:bg-[#026662] group-hover:text-white"
             >
               <Icon icon="hugeicons:mail-01" />
             </div>
             <div>
-              <p class="text-base font-semibold text-gray-950 group-hover:text-[#026662]">
+              <p class="text-sm font-semibold text-gray-950 group-hover:text-[#026662]">
                 Contact Us
               </p>
               <p class="mt-0.5 text-xs leading-relaxed text-gray-500">
@@ -490,10 +493,11 @@ onUnmounted(cancelClose);
           </NuxtLink>
         </div>
 
-        <div class="pt-1">
+        <div class="mt-4 border-t border-gray-100 pt-3">
           <NuxtLink
             to="/about"
-            class="inline-flex items-center gap-2 text-sm font-semibold text-[#026662] hover:underline"
+            class="inline-flex items-center gap-2 text-xs font-semibold text-[#026662] hover:underline sm:text-sm"
+            @click="closeDesktopMenu"
           >
             Learn about Deagensie
             <Icon icon="hugeicons:arrow-right-02" class="text-base" />
@@ -502,22 +506,27 @@ onUnmounted(cancelClose);
       </div>
 
       <div
-        class="relative flex w-[320px] shrink-0 flex-col justify-between overflow-hidden rounded-3xl border border-[#05DED5]/30 bg-[#E6FEFD] p-7 text-gray-950"
+        class="relative flex w-[290px] shrink-0 flex-col justify-between overflow-hidden rounded-2xl border border-[#05DED5]/30 bg-[#E6FEFD] p-5 text-gray-950 lg:w-[310px] lg:p-6"
       >
-        <div class="space-y-3">
-          <p class="text-xl leading-tight font-bold">Built on Integrity. Driven by Impact.</p>
+        <div class="space-y-2">
+          <p class="text-lg leading-tight font-bold lg:text-xl">
+            Built on Integrity. Driven by Impact.
+          </p>
           <NuxtLink
             to="https://app-deagensie-waitlist.vercel.app/"
-            class="inline-flex items-center gap-1.5 text-sm font-semibold text-[#04308F] hover:underline"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center gap-1.5 text-xs font-semibold text-[#04308F] hover:underline lg:text-sm"
+            @click="closeDesktopMenu"
           >
             Join the Ecosystem
             <Icon icon="hugeicons:arrow-right-02" class="text-base" />
           </NuxtLink>
         </div>
-        <div class="mt-4 overflow-hidden rounded-2xl border border-gray-200/80 bg-white p-2">
+        <div class="mt-3 overflow-hidden rounded-xl border border-gray-200/80 bg-white p-1.5">
           <NuxtImg
             src="/images/pages/about/who-we-are.webp"
-            class="aspect-16/10 w-full rounded-xl object-cover"
+            class="aspect-16/10 w-full rounded-lg object-cover"
           />
         </div>
       </div>
@@ -525,49 +534,55 @@ onUnmounted(cancelClose);
 
     <div
       v-else-if="activeDesktopMenu === 'subscription'"
-      class="flex aspect-887/336 w-[calc(887/1440*100vw)] max-w-[887px] gap-12.5 rounded-[inherit] p-10"
+      class="flex w-[860px] max-w-[calc(100vw-3rem)] gap-8 rounded-[inherit] p-6 lg:gap-10 lg:p-7"
     >
-      <div class="w-[calc(304/887*100%+calc(var(--spacing)*10))] shrink-0 space-y-6">
-        <p class="text-2xl leading-normal font-semibold">
-          <NuxtLink to="/subscription" class="hover:underline">
+      <div class="w-[280px] shrink-0 space-y-4">
+        <p class="text-xl leading-snug font-semibold">
+          <NuxtLink to="/subscription" class="hover:underline" @click="closeDesktopMenu">
             Flexible Subscription Model
           </NuxtLink>
         </p>
-        <p>Access business solutions and creative talents on a flexible, project-based basis.</p>
+        <p class="text-xs leading-relaxed text-gray-500">
+          Access business solutions and creative talents on a flexible, project-based basis.
+        </p>
       </div>
-      <div class="flex flex-1 justify-between">
-        <div class="space-y-6">
-          <p class="text-lg leading-snug font-medium uppercase">Businesses</p>
+      <div class="flex flex-1 justify-between gap-6">
+        <div class="space-y-4">
+          <p class="text-sm leading-snug font-semibold tracking-wider text-gray-800 uppercase">
+            Businesses
+          </p>
           <ul
-            class="space-y-6 **:[a]:inline-flex **:[a]:items-center **:[a]:gap-4 **:[a]:py-1 **:[a]:text-sm **:[a]:leading-relaxed **:[svg]:text-base"
+            class="space-y-3.5 **:[a]:inline-flex **:[a]:items-center **:[a]:gap-3 **:[a]:text-xs **:[a]:leading-relaxed sm:**:[a]:text-sm **:[svg]:text-base"
           >
             <li>
-              <NuxtLink to="/subscription" class="hover:underline">
+              <NuxtLink to="/subscription" class="hover:underline" @click="closeDesktopMenu">
                 <Icon icon="hugeicons:arrow-right-01" />
                 Growth-as-a-Service (GrowthOS)
               </NuxtLink>
             </li>
             <li>
-              <NuxtLink to="/subscription" class="hover:underline">
+              <NuxtLink to="/subscription" class="hover:underline" @click="closeDesktopMenu">
                 <Icon icon="hugeicons:arrow-right-01" />
                 Talent-as-a-Service
               </NuxtLink>
             </li>
           </ul>
         </div>
-        <div class="space-y-6">
-          <p class="text-lg leading-snug font-medium uppercase">Creatives</p>
+        <div class="space-y-4">
+          <p class="text-sm leading-snug font-semibold tracking-wider text-gray-800 uppercase">
+            Creatives
+          </p>
           <ul
-            class="space-y-6 **:[a]:inline-flex **:[a]:items-center **:[a]:gap-4 **:[a]:py-1 **:[a]:text-sm **:[a]:leading-relaxed **:[svg]:text-base"
+            class="space-y-3.5 **:[a]:inline-flex **:[a]:items-center **:[a]:gap-3 **:[a]:text-xs **:[a]:leading-relaxed sm:**:[a]:text-sm **:[svg]:text-base"
           >
             <li>
-              <NuxtLink to="/creatives" class="hover:underline">
+              <NuxtLink to="/creatives" class="hover:underline" @click="closeDesktopMenu">
                 <Icon icon="hugeicons:arrow-right-01" />
                 Creative Match
               </NuxtLink>
             </li>
             <li>
-              <NuxtLink to="/creatives" class="hover:underline">
+              <NuxtLink to="/creatives" class="hover:underline" @click="closeDesktopMenu">
                 <Icon icon="hugeicons:arrow-right-01" />
                 Gig Economy
               </NuxtLink>
@@ -579,21 +594,22 @@ onUnmounted(cancelClose);
 
     <div
       v-else-if="activeDesktopMenu === 'resource'"
-      class="flex aspect-880/420 w-[calc(880/1440*100vw)] max-w-[880px] gap-8 rounded-[inherit] p-8"
+      class="flex w-[860px] max-w-[calc(100vw-3rem)] gap-6 rounded-[inherit] p-6 lg:gap-8 lg:p-7"
     >
-      <div class="flex flex-1 flex-col justify-between space-y-4">
-        <div class="space-y-3">
+      <div class="flex flex-1 flex-col justify-between">
+        <div class="space-y-2">
           <NuxtLink
             to="/blog"
-            class="group flex items-start gap-4 rounded-2xl p-3 transition-colors hover:bg-gray-100/70"
+            class="group flex items-start gap-3.5 rounded-2xl p-2.5 transition-colors hover:bg-gray-100/70"
+            @click="closeDesktopMenu"
           >
             <div
-              class="flex size-11 shrink-0 items-center justify-center rounded-xl border border-gray-200/80 bg-gray-50 text-xl text-[#026662] transition-colors group-hover:bg-[#026662] group-hover:text-white"
+              class="flex size-10 shrink-0 items-center justify-center rounded-xl border border-gray-200/80 bg-gray-50 text-xl text-[#026662] transition-colors group-hover:bg-[#026662] group-hover:text-white"
             >
               <Icon icon="hugeicons:quill-write-02" />
             </div>
             <div>
-              <p class="text-base font-semibold text-gray-950 group-hover:text-[#026662]">
+              <p class="text-sm font-semibold text-gray-950 group-hover:text-[#026662]">
                 Blog & Insights
               </p>
               <p class="mt-0.5 text-xs leading-relaxed text-gray-500">
@@ -604,15 +620,16 @@ onUnmounted(cancelClose);
 
           <NuxtLink
             to="/resource"
-            class="group flex items-start gap-4 rounded-2xl p-3 transition-colors hover:bg-gray-100/70"
+            class="group flex items-start gap-3.5 rounded-2xl p-2.5 transition-colors hover:bg-gray-100/70"
+            @click="closeDesktopMenu"
           >
             <div
-              class="flex size-11 shrink-0 items-center justify-center rounded-xl border border-gray-200/80 bg-gray-50 text-xl text-[#026662] transition-colors group-hover:bg-[#026662] group-hover:text-white"
+              class="flex size-10 shrink-0 items-center justify-center rounded-xl border border-gray-200/80 bg-gray-50 text-xl text-[#026662] transition-colors group-hover:bg-[#026662] group-hover:text-white"
             >
               <Icon icon="hugeicons:book-open-02" />
             </div>
             <div>
-              <p class="text-base font-semibold text-gray-950 group-hover:text-[#026662]">
+              <p class="text-sm font-semibold text-gray-950 group-hover:text-[#026662]">
                 eBooks & Guides
               </p>
               <p class="mt-0.5 text-xs leading-relaxed text-gray-500">
@@ -623,15 +640,16 @@ onUnmounted(cancelClose);
 
           <NuxtLink
             to="/resource"
-            class="group flex items-start gap-4 rounded-2xl p-3 transition-colors hover:bg-gray-100/70"
+            class="group flex items-start gap-3.5 rounded-2xl p-2.5 transition-colors hover:bg-gray-100/70"
+            @click="closeDesktopMenu"
           >
             <div
-              class="flex size-11 shrink-0 items-center justify-center rounded-xl border border-gray-200/80 bg-gray-50 text-xl text-[#026662] transition-colors group-hover:bg-[#026662] group-hover:text-white"
+              class="flex size-10 shrink-0 items-center justify-center rounded-xl border border-gray-200/80 bg-gray-50 text-xl text-[#026662] transition-colors group-hover:bg-[#026662] group-hover:text-white"
             >
               <Icon icon="hugeicons:chart-bar-line" />
             </div>
             <div>
-              <p class="text-base font-semibold text-gray-950 group-hover:text-[#026662]">
+              <p class="text-sm font-semibold text-gray-950 group-hover:text-[#026662]">
                 White Papers & Reports
               </p>
               <p class="mt-0.5 text-xs leading-relaxed text-gray-500">
@@ -642,10 +660,11 @@ onUnmounted(cancelClose);
           </NuxtLink>
         </div>
 
-        <div class="pt-1">
+        <div class="mt-4 border-t border-gray-100 pt-3">
           <NuxtLink
             to="/resource"
-            class="inline-flex items-center gap-2 text-sm font-semibold text-[#026662] hover:underline"
+            class="inline-flex items-center gap-2 text-xs font-semibold text-[#026662] hover:underline sm:text-sm"
+            @click="closeDesktopMenu"
           >
             Browse all resources
             <Icon icon="hugeicons:arrow-right-02" class="text-base" />
@@ -654,22 +673,23 @@ onUnmounted(cancelClose);
       </div>
 
       <div
-        class="relative flex w-[320px] shrink-0 flex-col justify-between overflow-hidden rounded-3xl border border-[#05DED5]/30 bg-[#E6FEFD] p-7 text-gray-950"
+        class="relative flex w-[290px] shrink-0 flex-col justify-between overflow-hidden rounded-2xl border border-[#05DED5]/30 bg-[#E6FEFD] p-5 text-gray-950 lg:w-[310px] lg:p-6"
       >
-        <div class="space-y-3">
-          <p class="text-xl leading-tight font-bold">Grow Smarter with Intelligence</p>
+        <div class="space-y-2">
+          <p class="text-lg leading-tight font-bold lg:text-xl">Grow Smarter with Intelligence</p>
           <NuxtLink
             to="/blog"
-            class="inline-flex items-center gap-1.5 text-sm font-semibold text-[#04308F] hover:underline"
+            class="inline-flex items-center gap-1.5 text-xs font-semibold text-[#04308F] hover:underline lg:text-sm"
+            @click="closeDesktopMenu"
           >
             Read Latest Insights
             <Icon icon="hugeicons:arrow-right-02" class="text-base" />
           </NuxtLink>
         </div>
-        <div class="mt-4 overflow-hidden rounded-2xl border border-gray-200/80 bg-white p-2">
+        <div class="mt-3 overflow-hidden rounded-xl border border-gray-200/80 bg-white p-1.5">
           <NuxtImg
             src="/images/pages/why/hero-4.png"
-            class="aspect-16/10 w-full rounded-xl object-cover"
+            class="aspect-16/10 w-full rounded-lg object-cover"
           />
         </div>
       </div>
