@@ -250,7 +250,7 @@ const startSequence = (fromIndex = 0) => {
 // ---------------------------------------------------------------------------
 // HOVER & TOUCH INTERACTIONS
 // ---------------------------------------------------------------------------
-const handleCubeMouseEnter = (index: number, event: MouseEvent) => {
+const handleCubeMouseEnter = (index: number, event: MouseEvent | FocusEvent) => {
   if (isTouchDevice.value) return;
 
   isHovered.value = true;
