@@ -26,7 +26,7 @@ const handleMouseMove = (e: MouseEvent) => {
 
 const heroStats = reactive([
   {
-    value: 5_000,
+    value: 2_000,
     displayValue: 0,
     suffix: '+',
     label: 'Network of top-rated, highly skilled global creatives',
@@ -40,7 +40,7 @@ const heroStats = reactive([
     hasAnimated: false,
   },
   {
-    value: 30,
+    value: 45,
     displayValue: 0,
     suffix: '%',
     label: 'Faster and efficient business growth',

@@ -4,13 +4,14 @@
       <h2
         class="text-center font-serif text-3xl leading-tight font-normal tracking-tight text-gray-900 sm:text-4xl lg:text-5xl"
       >
-        Redefining Talent & Business Growth in <br />
-        <span class="text-[#04308F]">Africa&apos;s Creative Economy </span>
+        We don&apos;t just build brands. We build <br />
+        <span class="text-[#04308F]"> ventures and products that scale. </span>
       </h2>
       <p class="mx-auto max-w-3xl text-base leading-relaxed font-normal text-gray-500 lg:text-lg">
-        We are a technology-led, ecosystem-driven creative growth agency empowering scalable
-        businesses, unlocking global African talent, and engineering brands that evolve, adapt, and
-        dominate.
+        Unlike traditional agencies, we combine strategy, branding, marketing, digital innovation,
+        and Talent-as-a-Service into one intelligent growth ecosystem. We believe that every
+        organization has the potential to become a market leader when strategy, technology,
+        creativity, and execution work together.
       </p>
     </div>
   </section>

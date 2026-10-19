@@ -10,14 +10,14 @@
         <h1
           class="font-serif text-3xl leading-tight font-normal tracking-tight text-gray-900 sm:text-4xl lg:text-6xl"
         >
-          Deagensie is not just an agency. <br />
-          <span class="text-[#04308F]"> It&apos;s a growth engine </span>
+          We don&apos;t simply create brands. <br />
+          <span class="text-[#04308F]"> We engineer business growth. </span>
         </h1>
         <p class="text-base leading-relaxed font-normal text-gray-500 sm:text-lg lg:text-xl">
-          A predictive intelligence platform, and a business accelerator in one. We don&apos;t just
-          design brands. We build legacies.
+          Deagensie helps ventures build the systems they need to grow, and connects exceptional
+          creative talent to the opportunities where they can thrive.
         </p>
-        <div
+        <!-- <div
           class="mx-auto flex max-w-4xl flex-wrap items-center justify-center gap-4 space-y-6 pt-4 text-center sm:space-y-0"
         >
           <NuxtLink
@@ -26,7 +26,7 @@
           >
             Work With Us
           </NuxtLink>
-        </div>
+        </div> -->
       </div>
     </div>
   </section>

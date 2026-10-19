@@ -1,33 +1,35 @@
 <template>
-  <section class="border-b border-gray-100 bg-white pt-28 pb-16 text-gray-900 lg:pt-36 lg:pb-24">
+  <section
+    class="border-b border-gray-100 bg-white pt-28 pb-16 text-gray-900 sm:pt-24 sm:pb-20 lg:pt-36 lg:pb-24"
+  >
     <div class="mx-auto w-5/6 max-w-7xl">
       <div v-reveal="'fade-up'" class="mx-auto max-w-4xl space-y-6 text-center">
-        <!-- <span
-          class="inline-block rounded-full bg-[#04308F]/10 px-4 py-1.5 text-xs font-semibold tracking-widest text-[#04308F] uppercase"
-        >
-          Why Deagensie
-        </span> -->
         <h1
-          class="font-serif text-3xl leading-tight font-normal tracking-tight text-gray-900 sm:text-4xl lg:text-6xl"
+          class="font-serif text-3xl leading-[1.15] font-normal tracking-tight text-gray-900 sm:text-5xl lg:text-6xl"
         >
-          We are not just service providers; <br class="hidden lg:inline" />
-          <span class="text-[#04308F]">we are bridge builders </span>
+          More Than an Agency. <br />
+          <span class="text-[#04308F]">Your Business Growth Partner.</span>
         </h1>
         <p
-          class="font-open-sans text-base leading-relaxed font-normal text-gray-500 sm:text-lg lg:text-xl"
+          class="font-open-sans mx-auto max-w-2xl text-base leading-relaxed font-normal text-gray-600 sm:text-lg"
         >
-          We are the bridge between creative talent and businesses, ensuring that startups scale
-          faster and creatives thrive without borders.
+          Today&apos;s businesses require more than attractive logos and social media content. They
+          need intelligent strategies, scalable systems, and creative talent capable of delivering
+          measurable growth.
         </p>
-        <div
-          class="mx-auto flex max-w-4xl flex-wrap items-center justify-center gap-4 space-y-6 pt-4 text-center sm:space-y-0"
-        >
+        <div class="flex flex-wrap items-center justify-center gap-4 pt-2 sm:gap-5">
           <NuxtLink
             to="https://app-deagensie-waitlist.vercel.app/"
-            class="inline-flex items-center gap-2 rounded-full bg-[#04308F] px-8 py-4 text-base font-semibold text-white shadow-md shadow-[#04308F]/20 transition-all duration-300 hover:scale-105 hover:bg-[#05DED5] hover:text-gray-900"
+            class="inline-flex items-center justify-center rounded-full bg-[#04308F] px-8 py-3.5 text-sm font-semibold text-white shadow-md shadow-[#04308F]/20 transition-all duration-300 hover:scale-105 hover:bg-[#05DED5] hover:text-gray-900 sm:text-base"
           >
-            Get Started with Deagensie
+            Enter Deagensie
           </NuxtLink>
+          <!-- <a
+            href="#model"
+            class="inline-flex items-center justify-center rounded-full border border-gray-300 bg-white px-8 py-3.5 text-sm font-semibold text-gray-800 shadow-sm transition-all duration-300 hover:scale-105 hover:border-[#04308F] hover:text-[#04308F] sm:text-base"
+          >
+            Explore our model
+          </a> -->
         </div>
       </div>
     </div>

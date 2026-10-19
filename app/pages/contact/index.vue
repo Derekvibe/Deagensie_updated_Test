@@ -23,6 +23,12 @@ const contactFields = [
   'message',
 ] as const satisfies readonly (keyof ContactFormValues)[];
 
+useSeoMeta({
+  title: 'Contact Us | Deagensie',
+  description:
+    "Let's build something extraordinary. Whether you're launching a startup, scaling a growing business, or searching for exceptional creative talent, Deagensie is your trusted growth partner.",
+});
+
 const schema = toTypedSchema(
   z.object({
     firstName: z.string().min(1, 'First name is required'),
@@ -86,128 +92,239 @@ const onSubmit = handleSubmit(async (values, actions) => {
 <template>
   <div class="min-h-screen bg-white">
     <!-- Andela-Style Editorial Header -->
-    <section class="border-b border-gray-100 pt-28 pb-16 lg:pt-36 lg:pb-20">
-      <div class="mx-auto w-5/6 max-w-7xl space-y-5 text-center">
+    <section class="border-b border-gray-100 bg-[#FCFCFE] pt-28 pb-16 lg:pt-36 lg:pb-20">
+      <div v-reveal="'fade-up'" class="mx-auto w-5/6 max-w-7xl space-y-5 text-center">
         <span
           class="inline-block rounded-full bg-[#04308F]/10 px-4 py-1.5 text-xs font-semibold tracking-widest text-[#04308F] uppercase"
         >
-          Get In Touch
+          Let&apos;s Connect
         </span>
         <h1
-          class="font-serif text-3xl font-normal tracking-tight text-gray-900 sm:text-4xl lg:text-5xl xl:text-6xl"
+          class="font-serif text-3xl leading-[1.15] font-normal tracking-tight text-gray-900 sm:text-5xl lg:text-6xl"
         >
-          Let us know how<br class="hidden sm:inline" />
-          we can help
+          Let&apos;s Build Something <br class="hidden sm:inline" />
+          <span class="text-[#04308F]">Extraordinary.</span>
         </h1>
-        <p class="mx-auto max-w-2xl text-base leading-relaxed font-normal text-gray-500 lg:text-lg">
-          Whether you're looking to scale your business or find your next opportunity, we're here to
-          make it happen.
+        <p
+          class="font-open-sans mx-auto max-w-3xl text-base leading-relaxed font-normal text-gray-600 sm:text-lg"
+        >
+          Whether you&apos;re launching a startup, scaling a growing business, building a global
+          brand, or searching for exceptional creative talent, Deagensie is your trusted growth
+          partner.
         </p>
       </div>
     </section>
 
     <!-- Contact Form + Info Panel -->
     <section class="py-16 lg:py-24">
-      <div class="mx-auto w-5/6 max-w-7xl lg:flex lg:gap-14">
+      <div class="mx-auto w-5/6 max-w-7xl lg:flex lg:items-start lg:gap-14">
         <!-- Left Info Panel -->
-        <div class="mb-10 space-y-6 lg:mb-0 lg:w-96 lg:shrink-0">
-          <!-- Get In Touch Card -->
-          <div class="space-y-7 rounded-3xl border border-gray-100 bg-gray-50 p-8 shadow-sm">
-            <p class="font-serif text-xl font-normal text-gray-900">Get In Touch</p>
-            <ul class="space-y-6">
-              <li class="flex items-start gap-4">
-                <div
-                  class="flex size-11 shrink-0 items-center justify-center rounded-full bg-[#04308F]/10"
-                >
-                  <Icon icon="hugeicons:mail-02" class="text-lg text-[#04308F]" />
+        <div class="mb-12 space-y-6 lg:mb-0 lg:w-[420px] lg:shrink-0">
+          <!-- Offices / Locations Card -->
+          <div
+            class="space-y-5 rounded-3xl border border-gray-100 bg-gray-50/80 p-6 shadow-xs sm:p-7"
+          >
+            <div class="flex items-center justify-between border-b border-gray-200/60 pb-3.5">
+              <p class="font-serif text-lg font-normal text-gray-900">Our Locations</p>
+              <span
+                class="rounded-full bg-emerald-50 px-2.5 py-0.5 text-[11px] font-semibold text-emerald-700"
+              >
+                Lagos, Nigeria
+              </span>
+            </div>
+
+            <div class="space-y-3.5">
+              <!-- Admin HQ -->
+              <div
+                class="group rounded-2xl border border-gray-100 bg-white p-4.5 shadow-2xs transition-all duration-200 hover:border-[#04308F]/30 hover:shadow-sm"
+              >
+                <div class="flex items-start gap-3.5">
+                  <div
+                    class="flex size-10 shrink-0 items-center justify-center rounded-xl bg-[#04308F]/10 text-[#04308F]"
+                  >
+                    <Icon icon="lucide:building-2" class="size-5" />
+                  </div>
+                  <div class="space-y-1">
+                    <div class="flex items-center gap-2">
+                      <span
+                        class="font-mono text-xs font-bold tracking-wider text-[#04308F] uppercase"
+                      >
+                        Admin HQ
+                      </span>
+                      <span
+                        class="rounded bg-gray-100 px-1.5 py-0.5 text-[10px] font-medium text-gray-600"
+                      >
+                        VI
+                      </span>
+                    </div>
+                    <p class="text-sm font-bold text-gray-900">2A Louis Solomon Close</p>
+                    <p class="text-xs leading-relaxed text-gray-500">
+                      Off Ahmadu Bello Way, Victoria Island, Lagos
+                    </p>
+                  </div>
                 </div>
-                <div class="space-y-0.5">
-                  <p class="text-sm font-bold text-gray-900">Email</p>
+              </div>
+
+              <!-- Operations -->
+              <div
+                class="group rounded-2xl border border-gray-100 bg-white p-4.5 shadow-2xs transition-all duration-200 hover:border-[#026662]/30 hover:shadow-sm"
+              >
+                <div class="flex items-start gap-3.5">
+                  <div
+                    class="flex size-10 shrink-0 items-center justify-center rounded-xl bg-[#026662]/10 text-[#026662]"
+                  >
+                    <Icon icon="lucide:map-pin" class="size-5" />
+                  </div>
+                  <div class="space-y-1">
+                    <div class="flex items-center gap-2">
+                      <span
+                        class="font-mono text-xs font-bold tracking-wider text-[#026662] uppercase"
+                      >
+                        Operations
+                      </span>
+                      <span
+                        class="rounded bg-gray-100 px-1.5 py-0.5 text-[10px] font-medium text-gray-600"
+                      >
+                        VGC
+                      </span>
+                    </div>
+                    <p class="text-sm font-bold text-gray-900">Suite J256, Road 5</p>
+                    <p class="text-xs leading-relaxed text-gray-500">
+                      Ikota Business Complex, Victoria Garden City, Lagos
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Direct Channels Card -->
+          <div
+            class="space-y-4 rounded-3xl border border-gray-100 bg-gray-50/80 p-6 shadow-xs sm:p-7"
+          >
+            <p class="font-serif text-lg font-normal text-gray-900">Direct Inquiries</p>
+            <ul class="space-y-4">
+              <!-- Email -->
+              <li class="flex items-center gap-3.5">
+                <div
+                  class="flex size-10 shrink-0 items-center justify-center rounded-xl bg-[#04308F]/10 text-[#04308F]"
+                >
+                  <Icon icon="hugeicons:mail-02" class="size-5" />
+                </div>
+                <div class="min-w-0 flex-1">
+                  <p class="text-[11px] font-bold tracking-wider text-gray-400 uppercase">Email</p>
                   <a
                     href="mailto:hello@deagensie.com"
-                    class="text-sm text-gray-500 transition-colors hover:text-[#04308F] hover:underline"
+                    class="truncate text-sm font-semibold text-gray-900 transition-colors hover:text-[#04308F] hover:underline"
                   >
                     hello@deagensie.com
                   </a>
                 </div>
               </li>
-              <li class="flex items-start gap-4">
+
+              <!-- Website -->
+              <li class="flex items-center gap-3.5">
                 <div
-                  class="flex size-11 shrink-0 items-center justify-center rounded-full bg-[#04308F]/10"
+                  class="flex size-10 shrink-0 items-center justify-center rounded-xl bg-[#05DED5]/15 text-[#026662]"
                 >
-                  <Icon icon="hugeicons:call-02" class="text-lg text-[#04308F]" />
+                  <Icon icon="lucide:globe" class="size-5" />
                 </div>
-                <div class="space-y-0.5">
-                  <p class="text-sm font-bold text-gray-900">Phone</p>
+                <div class="min-w-0 flex-1">
+                  <p class="text-[11px] font-bold tracking-wider text-gray-400 uppercase">
+                    Website
+                  </p>
+                  <a
+                    href="https://www.deagensie.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="truncate text-sm font-semibold text-gray-900 transition-colors hover:text-[#04308F] hover:underline"
+                  >
+                    www.deagensie.com
+                  </a>
+                </div>
+              </li>
+
+              <!-- Phone -->
+              <li class="flex items-center gap-3.5">
+                <div
+                  class="flex size-10 shrink-0 items-center justify-center rounded-xl bg-gray-200/60 text-gray-700"
+                >
+                  <Icon icon="hugeicons:call-02" class="size-5" />
+                </div>
+                <div class="min-w-0 flex-1">
+                  <p class="text-[11px] font-bold tracking-wider text-gray-400 uppercase">Phone</p>
                   <a
                     href="tel:+2348063836398"
-                    class="text-sm text-gray-500 transition-colors hover:text-[#04308F] hover:underline"
+                    class="truncate text-sm font-semibold text-gray-900 transition-colors hover:text-[#04308F] hover:underline"
                   >
                     +234 806 383 6398
                   </a>
                 </div>
               </li>
-              <li class="flex items-start gap-4">
-                <div
-                  class="flex size-11 shrink-0 items-center justify-center rounded-full bg-[#04308F]/10"
-                >
-                  <Icon icon="hugeicons:clock-01" class="text-lg text-[#04308F]" />
-                </div>
-                <div class="space-y-0.5">
-                  <p class="text-sm font-bold text-gray-900">Availability</p>
-                  <p class="text-sm text-gray-500">Monday – Friday: 9:00 AM – 6:00 PM WAT</p>
-                  <p class="text-sm text-gray-500">Saturday: By Appointment</p>
-                </div>
-              </li>
             </ul>
           </div>
 
-          <!-- Follow Us Card -->
-          <div class="rounded-3xl border border-gray-100 bg-gray-50 p-8 shadow-sm">
-            <p class="mb-1 font-serif text-xl font-normal text-gray-900">Follow Us</p>
-            <p class="mb-6 text-sm text-gray-500">Stay connected with the Deagensie community</p>
-            <ul class="flex gap-3">
-              <li>
-                <a
-                  href="https://linkedin.com/company/deagensie"
-                  target="_blank"
-                  rel="noopener"
-                  class="flex size-11 items-center justify-center rounded-full border border-gray-200 bg-white text-gray-600 transition-all duration-200 hover:border-[#04308F] hover:text-[#04308F] hover:shadow-md"
-                >
-                  <Icon icon="mingcute:linkedin-fill" class="text-xl" />
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://instagram.com/deagensie"
-                  target="_blank"
-                  rel="noopener"
-                  class="flex size-11 items-center justify-center rounded-full border border-gray-200 bg-white text-gray-600 transition-all duration-200 hover:border-[#8F039C] hover:text-[#8F039C] hover:shadow-md"
-                >
-                  <Icon icon="ri:instagram-line" class="text-xl" />
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://x.com/deagensie"
-                  target="_blank"
-                  rel="noopener"
-                  class="flex size-11 items-center justify-center rounded-full border border-gray-200 bg-white text-gray-600 transition-all duration-200 hover:border-gray-900 hover:text-gray-900 hover:shadow-md"
-                >
-                  <Icon icon="devicon:twitter" class="text-xl" />
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://tiktok.com/@deagensie"
-                  target="_blank"
-                  rel="noopener"
-                  class="flex size-11 items-center justify-center rounded-full border border-gray-200 bg-white text-gray-600 transition-all duration-200 hover:border-gray-900 hover:text-gray-900 hover:shadow-md"
-                >
-                  <Icon icon="ri:tiktok-fill" class="text-xl" />
-                </a>
-              </li>
-            </ul>
+          <!-- Social Media Card -->
+          <div
+            class="space-y-4 rounded-3xl border border-gray-100 bg-gray-50/80 p-6 shadow-xs sm:p-7"
+          >
+            <div class="flex items-center justify-between">
+              <div>
+                <p class="font-serif text-lg font-normal text-gray-900">Social Media</p>
+                <p class="text-xs text-gray-500">Connect with the community</p>
+              </div>
+              <span
+                class="rounded-full bg-[#04308F]/10 px-2.5 py-1 font-mono text-xs font-semibold text-[#04308F]"
+              >
+                @deagensie
+              </span>
+            </div>
+
+            <div class="grid grid-cols-2 gap-2.5 pt-1">
+              <!-- Instagram -->
+              <a
+                href="https://instagram.com/deagensie"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="flex items-center gap-2.5 rounded-xl border border-gray-200/80 bg-white px-3.5 py-2.5 text-gray-700 transition-all duration-200 hover:border-[#8F039C] hover:text-[#8F039C] hover:shadow-xs"
+              >
+                <Icon icon="ri:instagram-line" class="size-4 shrink-0 text-[#8F039C]" />
+                <span class="text-xs font-semibold">Instagram</span>
+              </a>
+
+              <!-- LinkedIn -->
+              <a
+                href="https://linkedin.com/company/deagensie"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="flex items-center gap-2.5 rounded-xl border border-gray-200/80 bg-white px-3.5 py-2.5 text-gray-700 transition-all duration-200 hover:border-[#04308F] hover:text-[#04308F] hover:shadow-xs"
+              >
+                <Icon icon="mingcute:linkedin-fill" class="size-4 shrink-0 text-[#0077B5]" />
+                <span class="text-xs font-semibold">LinkedIn</span>
+              </a>
+
+              <!-- TikTok -->
+              <a
+                href="https://tiktok.com/@deagensie"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="flex items-center gap-2.5 rounded-xl border border-gray-200/80 bg-white px-3.5 py-2.5 text-gray-700 transition-all duration-200 hover:border-gray-900 hover:text-gray-900 hover:shadow-xs"
+              >
+                <Icon icon="ri:tiktok-fill" class="size-4 shrink-0 text-gray-900" />
+                <span class="text-xs font-semibold">TikTok</span>
+              </a>
+
+              <!-- X (Twitter) -->
+              <a
+                href="https://x.com/deagensie"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="flex items-center gap-2.5 rounded-xl border border-gray-200/80 bg-white px-3.5 py-2.5 text-gray-700 transition-all duration-200 hover:border-gray-900 hover:text-gray-900 hover:shadow-xs"
+              >
+                <Icon icon="devicon:twitter" class="size-4 shrink-0 text-gray-900" />
+                <span class="text-xs font-semibold">X (Twitter)</span>
+              </a>
+            </div>
           </div>
         </div>
 
