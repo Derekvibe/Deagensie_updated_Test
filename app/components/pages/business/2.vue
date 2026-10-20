@@ -28,7 +28,7 @@ const audiences = [
             </span>
 
             <h2
-              class="font-serif text-3xl leading-[1.15] font-normal tracking-tight text-gray-900 sm:text-4xl lg:text-5xl"
+              class="mx-auto w-full max-w-3xl text-center font-serif text-2xl leading-tight font-normal tracking-tight text-gray-900 sm:text-4xl lg:text-5xl 2xl:text-5xl"
             >
               Premium growth solutions for <br class="hidden sm:inline" />
               <span class="text-[#04308F]">visionary brands</span>

@@ -442,7 +442,10 @@ onBeforeUnmount(() => {
       <!-- Section Header -->
       <div class="values-header">
         <span class="values-eyebrow">OUR CORE VALUES</span>
-        <h2 id="values-heading" class="values-title">
+        <h2
+          id="values-heading"
+          class="values-title mx-auto w-full max-w-3xl text-center font-serif text-2xl leading-tight font-normal tracking-tight text-gray-900 sm:text-4xl lg:text-5xl 2xl:text-6xl"
+        >
           Eight values, <span class="values-title-highlight">one standard</span>
         </h2>
         <p class="values-subtitle">

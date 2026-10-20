@@ -3,15 +3,15 @@
     <div class="mx-auto w-5/6 max-w-7xl">
       <div v-reveal="'fade-up'" class="mx-auto max-w-3xl space-y-6 text-center">
         <!-- Top Badge -->
-        <span
+        <!-- <span
           class="inline-block rounded-full bg-[#04308F]/10 px-4 py-1.5 text-xs font-semibold tracking-widest text-[#04308F] uppercase"
         >
           TaaS for Ventures
-        </span>
+        </span> -->
 
         <!-- Main Title from User Copy -->
         <h1
-          class="font-serif text-3xl leading-tight font-normal tracking-tight text-gray-900 sm:text-4xl lg:text-6xl"
+          class="mx-auto max-w-[24ch] font-serif text-3xl leading-tight font-normal tracking-tight text-gray-900 sm:text-5xl lg:text-6xl xl:text-7xl"
         >
           Don&apos;t Search for Talent. <br />
           <span class="text-[#04308F]">Find the Right Match.</span>

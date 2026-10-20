@@ -8,7 +8,7 @@
           Core Engine 01 • Venture's Growth Lab
         </span> -->
         <h1
-          class="font-serif text-3xl leading-tight font-normal tracking-tight text-gray-900 sm:text-4xl lg:text-6xl"
+          class="mx-auto max-w-[24ch] font-serif text-3xl leading-tight font-normal tracking-tight text-gray-900 sm:text-5xl lg:text-6xl xl:text-7xl"
         >
           Two Engines. <br />
           <span class="text-[#04308F]">One Ecosystem.</span>

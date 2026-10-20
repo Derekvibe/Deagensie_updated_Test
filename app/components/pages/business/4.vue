@@ -14,7 +14,7 @@ import { Icon } from '@iconify/vue';
           Internal Team Upskilling
         </span>
         <h2
-          class="font-serif text-3xl leading-tight font-normal tracking-tight text-gray-900 sm:text-4xl lg:text-5xl"
+          class="mx-auto w-full max-w-3xl text-center font-serif text-2xl leading-tight font-normal tracking-tight text-gray-900 sm:text-4xl lg:text-5xl 2xl:text-5xl"
         >
           Build a forward-thinking team that <span class="text-[#04308F]"> drives magic </span>
         </h2>

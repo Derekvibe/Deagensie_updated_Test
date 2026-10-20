@@ -18,11 +18,15 @@ watch(route, () => {
     <div
       class="mx-auto flex h-18 w-full max-w-7xl items-center justify-between rounded-full border border-white/15 bg-black/90 px-6 text-white shadow-xl backdrop-blur-md transition-all duration-300 lg:h-20 lg:px-8"
     >
-      <NuxtLink to="/" aria-label="Go to homepage" class="flex shrink-0 items-center py-1">
+      <NuxtLink
+        to="/"
+        aria-label="Go to homepage"
+        class="-my-3 -ml-2.5 flex shrink-0 items-center py-1"
+      >
         <NuxtImg
           src="/images/logo.png"
           alt="Deagensie logo"
-          class="h-20 w-auto object-contain transition-all duration-300 sm:h-26 lg:h-32 xl:h-36"
+          class="h-32 w-auto object-contain transition-all duration-300 sm:h-34 lg:h-32 xl:h-36"
         />
       </NuxtLink>
       <SiteHeaderMobileNav v-if="isMobile" v-model:open="isSheetOpen" />

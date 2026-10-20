@@ -104,13 +104,13 @@ const toggleMobileExpand = (idx: number) => {
     <div class="mx-auto w-5/6 max-w-7xl space-y-12 lg:space-y-14">
       <!-- Section Header -->
       <div v-reveal="'fade-up'" class="mx-auto max-w-3xl space-y-3 text-center">
-        <span
+        <!-- <span
           class="inline-block rounded-full bg-[#04308F]/10 px-4 py-1.5 text-xs font-semibold tracking-widest text-[#04308F] uppercase"
         >
           Streamlined Process
-        </span>
+        </span> -->
         <h2
-          class="font-serif text-3xl leading-tight font-normal tracking-tight text-gray-900 sm:text-4xl lg:text-5xl"
+          class="mx-auto w-full max-w-3xl text-center font-serif text-2xl leading-tight font-normal tracking-tight text-gray-900 sm:text-4xl lg:text-5xl 2xl:text-6xl"
         >
           How It Works
         </h2>

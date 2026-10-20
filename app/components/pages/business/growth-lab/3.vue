@@ -2,9 +2,10 @@
   <section class="bg-[#04308F] py-20 text-white lg:py-28">
     <div v-reveal="'fade-up'" class="mx-auto w-5/6 max-w-5xl space-y-6 text-center">
       <h2
-        class="font-serif text-3xl leading-tight font-normal tracking-tight text-white sm:text-4xl lg:text-5xl"
+        class="mx-auto w-full max-w-3xl text-center font-serif text-2xl leading-tight font-normal tracking-tight text-white sm:text-4xl lg:text-5xl 2xl:text-5xl"
       >
-        Ready to Make Your Venture Growth-Ready?
+        Ready to Make Your Venture <br />
+        Growth-Ready?
       </h2>
       <div class="pt-4">
         <NuxtLink

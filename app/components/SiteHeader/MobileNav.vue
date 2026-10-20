@@ -14,8 +14,12 @@ const open = defineModel<boolean>('open', { default: false });
     <SheetContent class="w-full p-0">
       <SheetHeader class="bg-background sticky top-0 z-50">
         <div class="mx-auto flex h-16 w-5/6 items-center justify-between">
-          <NuxtLink to="/" aria-label="Go to homepage">
-            <NuxtImg :width="128" :height="34" src="/images/logo-dark.png" alt="Deagensie logo" />
+          <NuxtLink to="/" aria-label="Go to homepage" class="-my-4 -ml-2.5 flex items-center">
+            <NuxtImg
+              src="/images/logo-dark.png"
+              alt="Deagensie logo"
+              class="h-28 w-auto object-contain sm:h-32"
+            />
           </NuxtLink>
           <SheetTrigger as-child>
             <button type="button" class="text-2xl">

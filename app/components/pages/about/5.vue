@@ -191,7 +191,12 @@ onBeforeUnmount(() => {
         <!-- Section Header -->
         <header class="journey-header">
           <span class="journey-eyebrow">OUR HISTORY</span>
-          <h2 id="journey-heading" class="journey-title">Our journey</h2>
+          <h2
+            id="journey-heading"
+            class="journey-title mx-auto w-full max-w-3xl text-center font-serif text-2xl leading-tight font-normal tracking-tight text-gray-900 sm:text-4xl lg:text-5xl 2xl:text-5xl"
+          >
+            Our journey
+          </h2>
           <p class="journey-subtitle">
             Deagensie has been turning ventures into scalable brands, one milestone at a time.
           </p>
@@ -298,7 +303,7 @@ onBeforeUnmount(() => {
     </section>
 
     <!-- Closing Light Strip (Visible Dark-to-Light Transition) -->
-    <aside class="closing-strip" aria-label="Explore Deagensie">
+    <!-- <aside class="closing-strip" aria-label="Explore Deagensie">
       <div class="closing-container">
         <h3 class="closing-heading">Explore what Deagensie can build with you</h3>
         <p class="closing-subtitle">
@@ -307,7 +312,7 @@ onBeforeUnmount(() => {
         </p>
         <NuxtLink to="/contact" class="closing-cta-btn"> Get in touch </NuxtLink>
       </div>
-    </aside>
+    </aside> -->
   </div>
 </template>
 

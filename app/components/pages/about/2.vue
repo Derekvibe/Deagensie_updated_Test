@@ -16,9 +16,9 @@ import { Icon } from '@iconify/vue';
           Mission &amp; Vision
         </span>
         <h2
-          class="font-serif text-3xl leading-tight font-normal tracking-tight text-gray-900 sm:text-4xl lg:text-5xl"
+          class="mx-auto w-full max-w-3xl text-center font-serif text-2xl leading-tight font-normal tracking-tight text-gray-900 sm:text-4xl lg:text-5xl 2xl:text-6xl"
         >
-          Driven by purpose, <span class="text-[#04308F]">defined by impact</span>
+          Driven by purpose, <br /><span class="text-[#04308F]">defined by impact</span>
         </h2>
         <p class="mx-auto max-w-2xl text-base leading-relaxed font-normal text-gray-500 sm:text-lg">
           Our mission and vision define how we partner with ambitious organizations to build

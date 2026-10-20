@@ -78,15 +78,16 @@ const selectedCandidateIndex = ref(0);
       <!-- Section 1: Engagement Models -->
       <div class="space-y-12">
         <div v-reveal="'fade-up'" class="mx-auto max-w-3xl space-y-3 text-center">
-          <span
+          <!-- <span
             class="inline-block rounded-full bg-[#04308F]/10 px-4 py-1.5 text-xs font-semibold tracking-widest text-[#04308F] uppercase"
           >
             Flexible Deployment
-          </span>
+          </span> -->
           <h2
-            class="font-serif text-3xl leading-tight font-normal tracking-tight text-gray-900 sm:text-4xl lg:text-5xl"
+            class="mx-auto w-full max-w-3xl text-center font-serif text-2xl leading-tight font-normal tracking-tight text-gray-900 sm:text-4xl lg:text-5xl 2xl:text-6xl"
           >
-            Engagement Models Tailored to Scale
+            Engagement Models Tailored <br />
+            <span class="text-[#04308F]">to Scale</span>
           </h2>
           <p class="mx-auto max-w-2xl text-base leading-relaxed text-gray-600 sm:text-lg">
             Engage talent for projects, contract roles, remote positions, long-term engagements or

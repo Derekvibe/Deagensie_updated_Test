@@ -57,9 +57,9 @@ const colorMap: Record<string, string> = {
         Case Studies & Proof of Impact
       </span>
       <h2
-        class="text-center font-serif text-3xl leading-tight font-normal tracking-tight text-gray-900 sm:text-4xl lg:text-5xl"
+        class="mx-auto w-full max-w-3xl text-center font-serif text-2xl leading-tight font-normal tracking-tight text-gray-900 sm:text-4xl lg:text-5xl 2xl:text-6xl"
       >
-        Our work speaks for itself
+        Our work speaks for <span class="text-[#04308F]">itself</span>
       </h2>
       <p class="mx-auto mt-4 max-w-2xl text-base leading-relaxed text-gray-500">
         Real projects. Real impact. Delivered with precision, strategy, and creative excellence.

@@ -10,7 +10,7 @@
           Why Deagensie
         </span> -->
         <h2
-          class="font-serif text-3xl leading-tight font-normal tracking-tight text-gray-900 sm:text-4xl lg:text-5xl"
+          class="mx-auto w-full max-w-3xl text-center font-serif text-2xl leading-tight font-normal tracking-tight text-gray-900 sm:text-4xl lg:text-5xl 2xl:text-5xl"
         >
           Because the future belongs to brands that think differently
         </h2>

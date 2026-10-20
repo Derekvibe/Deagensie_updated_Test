@@ -58,14 +58,14 @@ const systemPillars = [
     <div class="mx-auto w-5/6 max-w-7xl space-y-16 lg:space-y-20">
       <!-- Section Header -->
       <div v-reveal="'fade-up'" class="mx-auto max-w-3xl space-y-4 text-center">
-        <span
+        <!-- <span
           class="inline-block rounded-full bg-[#04308F]/10 px-4 py-1.5 text-xs font-semibold tracking-widest text-[#04308F] uppercase"
         >
           The Venture System
-        </span>
+        </span> -->
 
         <h2
-          class="font-serif text-3xl leading-tight font-normal tracking-tight text-gray-900 sm:text-4xl lg:text-5xl"
+          class="mx-auto w-full max-w-3xl text-center font-serif text-2xl leading-tight font-normal tracking-tight text-gray-900 sm:text-4xl lg:text-5xl 2xl:text-6xl"
         >
           More Than an Agency. <br class="hidden sm:inline" />
           <span class="text-[#04308F]">A Venture Growth System.</span>
@@ -144,11 +144,11 @@ const systemPillars = [
       >
         <div class="mx-auto max-w-4xl space-y-8 text-center">
           <div class="space-y-3">
-            <span
+            <!-- <span
               class="inline-block rounded-full bg-[#04308F]/10 px-4 py-1.5 text-xs font-semibold tracking-widest text-[#04308F] uppercase"
             >
               The Interconnected Loop
-            </span>
+            </span> -->
 
             <h3 class="font-serif text-3xl font-normal text-gray-900 sm:text-4xl">
               That's the <strong class="font-bold text-[#04308F]">Growth Lab.</strong>

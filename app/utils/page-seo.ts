@@ -44,9 +44,9 @@ const staticPageSeo: Record<string, PageSeo> = {
       'Read Deagensie insights on business growth, branding, digital platforms, AI matching, and the creative talent economy.',
   },
   '/resource': {
-    title: 'Resource Hub | Growth & Talent Intelligence',
+    title: 'Deagensie Newsroom | Press, Media & Growth Resources',
     description:
-      'Explore Deagensie resources, playbooks, and frameworks for creative professionals, founders, and scaling teams.',
+      'The latest media coverage on Deagensie, research reports, press releases, company news, and brand media resources.',
   },
   '/contact': {
     title: 'Contact Deagensie | Start a Project or Join TaaS',

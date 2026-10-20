@@ -322,7 +322,12 @@ const metrics: MetricItem[] = [
       <div class="team-container">
         <!-- Section Header -->
         <div class="team-header">
-          <h2 id="team-heading" class="team-title">Meet the people behind Deagensie</h2>
+          <h2
+            id="team-heading"
+            class="team-title mx-auto w-full max-w-3xl text-center font-serif text-2xl leading-tight font-normal tracking-tight text-gray-900 sm:text-4xl lg:text-5xl 2xl:text-6xl"
+          >
+            Meet the people behind <span class="text-[#04308F] italic">deagensie</span>
+          </h2>
           <p class="team-subtitle">
             Strategists, designers, engineers and marketers building ventures end to end.
           </p>

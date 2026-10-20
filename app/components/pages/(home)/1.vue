@@ -27,7 +27,7 @@ const brands = [
       <h2
         class="mx-auto w-full max-w-3xl text-center font-serif text-2xl leading-tight font-normal tracking-tight text-gray-900 sm:text-4xl lg:text-5xl 2xl:text-6xl"
       >
-        Forward-thinking brands trust <span class="text-[#04308F]"> Deagensie </span>
+        Forward-thinking brands trust <span class="text-[#04308F] italic"> deagensie </span>
       </h2>
     </div>
 
