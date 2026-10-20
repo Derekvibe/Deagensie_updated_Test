@@ -284,7 +284,7 @@ onBeforeUnmount(() => {
 interface MetricItem {
   label: string;
   value: string;
-  description: string;
+  description?: string;
 }
 
 const metrics: MetricItem[] = [
@@ -311,7 +311,7 @@ const metrics: MetricItem[] = [
   {
     label: 'Growth acceleration',
     value: '45%',
-    description: 'Faster and efficient business growth',
+    description: '',
   },
 ];
 </script>
@@ -420,7 +420,7 @@ const metrics: MetricItem[] = [
             <div class="metric-value-row">
               <span class="metric-value">{{ item.value }}</span>
             </div>
-            <p class="metric-description">{{ item.description }}</p>
+            <p v-if="item.description" class="metric-description">{{ item.description }}</p>
           </article>
         </div>
 
