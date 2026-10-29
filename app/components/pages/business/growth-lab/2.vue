@@ -54,7 +54,7 @@ const stages = [
           v-for="st in stages"
           :key="st.name"
           v-reveal="'fade-up'"
-          class="flex flex-col justify-between rounded-2xl border border-gray-200/80 bg-[#FAFAFA] p-7 transition-all duration-300 hover:border-[#04308F]/30 hover:bg-white hover:shadow-lg sm:p-8"
+          class="flex min-w-0 flex-col justify-between rounded-2xl border border-gray-200/80 bg-[#FAFAFA] p-7 transition-all duration-300 hover:border-[#04308F]/30 hover:bg-white hover:shadow-lg sm:p-8"
         >
           <div class="space-y-4">
             <div class="flex items-center justify-between border-b border-gray-200 pb-3">
@@ -66,7 +66,7 @@ const stages = [
               </div>
             </div>
 
-            <h3 class="font-serif text-2xl font-bold tracking-tight text-gray-900">
+            <h3 class="font-serif text-2xl font-bold tracking-tight break-words text-gray-900">
               {{ st.name }}
             </h3>
 

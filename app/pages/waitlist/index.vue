@@ -97,9 +97,7 @@ async function handleSubmit() {
         >
           Early Access
         </span>
-        <h1
-          class="font-serif text-3xl font-normal tracking-tight text-gray-900 sm:text-4xl lg:text-5xl xl:text-6xl"
-        >
+        <h1 class="type-page-title font-serif text-gray-900">
           Be First Inside<br class="hidden sm:inline" />
           Deagensie
         </h1>

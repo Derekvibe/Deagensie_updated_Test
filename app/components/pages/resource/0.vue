@@ -476,9 +476,7 @@ const handleNewsletterSubmit = () => {
     <section class="mx-auto w-11/12 max-w-7xl pt-4 pb-12 sm:pt-8 sm:pb-16">
       <!-- Centered Header -->
       <div v-reveal="'fade-up'" class="mx-auto max-w-3xl text-center">
-        <h1
-          class="mx-auto max-w-[24ch] font-serif text-3xl leading-tight font-normal tracking-tight text-gray-900 sm:text-5xl lg:text-6xl xl:text-7xl"
-        >
+        <h1 class="type-display-title mx-auto max-w-[24ch] font-serif text-gray-900">
           Deagensie <span class="text-[#04308F] italic">Newsroom</span>
         </h1>
         <p class="mt-4 text-base leading-relaxed text-[#717A7E] sm:text-lg lg:text-xl">
@@ -1012,25 +1010,15 @@ const handleNewsletterSubmit = () => {
               </div>
             </div>
 
-            <!-- Right: Partner & Team Collage -->
+            <!-- Right: Collaborative team image -->
             <div
               class="relative overflow-hidden rounded-2xl border border-white/10 bg-white/5 p-6 backdrop-blur-xs"
             >
-              <div class="grid grid-cols-3 gap-3">
+              <div class="overflow-hidden rounded-xl">
                 <NuxtImg
-                  src="/images/pages/about/team/anthony-olori.png"
-                  alt="Team member"
-                  class="aspect-square rounded-xl object-cover"
-                />
-                <NuxtImg
-                  src="/images/pages/about/team/bright-okorafor.png"
-                  alt="Team member"
-                  class="aspect-square rounded-xl object-cover"
-                />
-                <NuxtImg
-                  src="/images/pages/about/team/solabomi-jeminusi.png"
-                  alt="Team member"
-                  class="aspect-square rounded-xl object-cover"
+                  src="/images/pages/business/hero.webp"
+                  alt="Creative team collaborating around a table"
+                  class="aspect-video w-full object-cover"
                 />
               </div>
               <div
