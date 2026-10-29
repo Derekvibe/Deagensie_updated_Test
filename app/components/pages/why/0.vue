@@ -1,12 +1,10 @@
 <template>
   <section
-    class="border-b border-gray-100 bg-white pt-28 pb-16 text-gray-900 sm:pt-24 sm:pb-20 lg:pt-36 lg:pb-24"
+    class="border-b border-gray-100 bg-white pt-28 pb-16 text-gray-900 sm:pt-32 sm:pb-20 lg:pt-36 lg:pb-24"
   >
     <div class="mx-auto w-5/6 max-w-7xl">
       <div v-reveal="'fade-up'" class="mx-auto max-w-4xl space-y-6 text-center">
-        <h1
-          class="font-serif text-3xl leading-[1.15] font-normal tracking-tight text-gray-900 sm:text-5xl lg:text-6xl"
-        >
+        <h1 class="type-feature-title font-serif text-gray-900">
           More Than an Agency. <br />
           <span class="text-[#04308F]">Your Business Growth Partner.</span>
         </h1>

@@ -10,9 +10,7 @@
         </span> -->
 
         <!-- Main Title from User Copy -->
-        <h1
-          class="mx-auto max-w-[24ch] font-serif text-3xl leading-tight font-normal tracking-tight text-gray-900 sm:text-5xl lg:text-6xl xl:text-7xl"
-        >
+        <h1 class="type-display-title mx-auto max-w-[24ch] font-serif text-gray-900">
           Don&apos;t Search for Talent. <br />
           <span class="text-[#04308F]">Find the Right Match.</span>
         </h1>

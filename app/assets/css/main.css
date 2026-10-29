@@ -132,6 +132,52 @@
   font-family: var(--font-open-sans);
 }
 
+.type-display-title,
+.type-feature-title {
+  font-size: 1.875rem;
+  line-height: 1.15;
+  font-weight: 400;
+  letter-spacing: -0.025em;
+}
+
+.type-page-title,
+.type-editorial-title {
+  font-size: 1.875rem;
+  line-height: 1.2;
+  font-weight: 400;
+  letter-spacing: -0.025em;
+}
+
+@media (min-width: 40rem) {
+  .type-display-title,
+  .type-feature-title {
+    font-size: 3rem;
+  }
+
+  .type-page-title,
+  .type-editorial-title {
+    font-size: 2.25rem;
+  }
+}
+
+@media (min-width: 64rem) {
+  .type-display-title,
+  .type-feature-title,
+  .type-page-title {
+    font-size: 3.75rem;
+  }
+
+  .type-editorial-title {
+    font-size: 3rem;
+  }
+}
+
+@media (min-width: 80rem) {
+  .type-display-title {
+    font-size: 4.5rem;
+  }
+}
+
 .stat-value {
   font-family: var(--font-open-sans);
   font-weight: 700;

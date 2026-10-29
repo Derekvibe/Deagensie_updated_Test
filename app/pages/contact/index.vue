@@ -99,9 +99,7 @@ const onSubmit = handleSubmit(async (values, actions) => {
         >
           Let&apos;s Connect
         </span>
-        <h1
-          class="font-serif text-3xl leading-[1.15] font-normal tracking-tight text-gray-900 sm:text-5xl lg:text-6xl"
-        >
+        <h1 class="type-feature-title font-serif text-gray-900">
           Let&apos;s Build Something <br class="hidden sm:inline" />
           <span class="text-[#04308F]">Extraordinary.</span>
         </h1>

@@ -21,9 +21,7 @@
         </div>
 
         <!-- Main Heading -->
-        <h1
-          class="font-serif text-3xl leading-tight font-normal tracking-tight text-[#02143C] sm:text-5xl lg:text-6xl lg:leading-tight"
-        >
+        <h1 class="type-feature-title font-serif text-[#02143C]">
           Where ventures grow<br />
           <span class="text-gray-600 italic">and creatives thrive.</span>
         </h1>

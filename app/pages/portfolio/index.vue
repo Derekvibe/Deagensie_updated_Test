@@ -115,9 +115,7 @@ useSeoMeta({
             >
               Deagensie Showcase
             </span>
-            <h1
-              class="font-serif text-3xl leading-tight font-normal tracking-tight text-gray-900 sm:text-4xl lg:text-6xl"
-            >
+            <h1 class="type-page-title font-serif text-gray-900">
               We craft experiences that captivate, connect<span class="text-[#04308F] italic">
                 & convert.</span
               >

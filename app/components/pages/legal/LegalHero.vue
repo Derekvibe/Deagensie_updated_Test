@@ -62,9 +62,7 @@ function handlePrint() {
           <span>Official Policy</span>
         </div>
 
-        <h1
-          class="font-serif text-3xl font-normal tracking-tight text-gray-900 sm:text-4xl lg:text-5xl"
-        >
+        <h1 class="type-editorial-title font-serif text-gray-900">
           {{ title }}
         </h1>
 

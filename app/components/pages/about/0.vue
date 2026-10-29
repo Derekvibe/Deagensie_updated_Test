@@ -7,9 +7,7 @@
         >
           About Deagensie
         </span> -->
-        <h1
-          class="mx-auto max-w-[24ch] font-serif text-3xl leading-tight font-normal tracking-tight text-gray-900 sm:text-5xl lg:text-6xl xl:text-6xl"
-        >
+        <h1 class="type-feature-title mx-auto max-w-[24ch] font-serif text-gray-900">
           We don&apos;t simply create brands. <br />
           <span class="text-[#04308F]"> We engineer business growth. </span>
         </h1>

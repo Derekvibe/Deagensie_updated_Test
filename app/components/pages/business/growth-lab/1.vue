@@ -118,7 +118,7 @@ const toggleMobileExpand = (idx: number) => {
           v-for="(layer, idx) in layers"
           :key="layer.title"
           v-reveal="{ animation: 'fade-up', delay: idx * 80 }"
-          class="group relative flex min-h-[220px] flex-col justify-between rounded-2xl transition-all duration-500 ease-out sm:min-h-[230px]"
+          class="group relative flex min-h-[220px] min-w-0 flex-col justify-between rounded-2xl transition-all duration-500 ease-out sm:min-h-[230px]"
           :class="[
             activeIndex === idx
               ? 'cursor-pointer bg-[#0F1E2E] p-7 text-white shadow-xl sm:p-8 lg:flex-[2.4]'
@@ -139,7 +139,7 @@ const toggleMobileExpand = (idx: number) => {
             <!-- Inactive / Closed State Layout: Moderate height, clean and compact -->
             <div v-if="activeIndex !== idx" class="space-y-2.5 pt-4">
               <h3
-                class="font-serif text-xl leading-snug font-normal text-gray-900 transition-colors group-hover:text-[#04308F] sm:text-2xl"
+                class="font-serif text-xl leading-snug font-normal break-words text-gray-900 transition-colors group-hover:text-[#04308F] sm:text-2xl"
               >
                 {{ layer.title }}
               </h3>
@@ -150,7 +150,9 @@ const toggleMobileExpand = (idx: number) => {
 
             <!-- Active / Opened State Layout: 2-Column checklist -->
             <div v-else class="space-y-3 pt-3">
-              <h3 class="font-serif text-2xl leading-snug font-bold text-white sm:text-3xl">
+              <h3
+                class="font-serif text-2xl leading-snug font-bold break-words text-white sm:text-3xl"
+              >
                 {{ layer.title }}
               </h3>
               <p class="text-xs font-medium text-[#05DED5] sm:text-sm">

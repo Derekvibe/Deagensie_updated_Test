@@ -7,7 +7,7 @@ const open = defineModel<boolean>('open', { default: false });
 <template>
   <Sheet v-model:open="open">
     <SheetTrigger as-child>
-      <button type="button" class="ml-auto text-2xl">
+      <button type="button" class="ml-auto flex size-12 items-center justify-center text-2xl">
         <Icon icon="hugeicons:menu-01" />
       </button>
     </SheetTrigger>
@@ -22,7 +22,7 @@ const open = defineModel<boolean>('open', { default: false });
             />
           </NuxtLink>
           <SheetTrigger as-child>
-            <button type="button" class="text-2xl">
+            <button type="button" class="flex size-12 items-center justify-center text-2xl">
               <Icon icon="hugeicons:cancel-01" />
             </button>
           </SheetTrigger>

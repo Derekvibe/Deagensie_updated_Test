@@ -628,9 +628,11 @@ onMounted(() => {
                 certificate termination, and edge DDoS defense.
               </li>
               <li>
-                <strong>Payment Processors (Stripe):</strong> During subscription checkouts
-                (<code>/subscription/[code]/[plan]/checkout</code>), Stripe sets security cookies to
-                authenticate transactions and detect fraudulent cards.
+                <strong>Payment Processors (Stripe):</strong> During subscription checkouts (<code
+                  class="break-words"
+                  >/subscription/[code]/[plan]/checkout</code
+                >), Stripe sets security cookies to authenticate transactions and detect fraudulent
+                cards.
               </li>
               <li>
                 <strong>Iconography & Typography:</strong> Google Fonts and Iconify CDN resources
